@@ -34,7 +34,7 @@ export default function AudioPage() {
         {songs.map((song) => (
           <li key={song.id} className="flex items-center space-x-4">
             <Image
-              src={song.album.cover_small}
+              src={`${song.album.cover_small}`}
               alt={song.title}
               width={50}
               height={50}
