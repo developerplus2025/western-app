@@ -20,7 +20,7 @@ export default function AudioPage() {
 
   return (
     <div className="mx-auto max-w-xl px-4 py-6">
-      <h1 className="mb-4 text-center text-2xl font-bold">Tìm kiếm bài hát</h1>
+      <h1 className="mb-4 text-center text-2xl font-bold">Search Song</h1>
 
       <Input
         type="text"
@@ -49,7 +49,7 @@ export default function AudioPage() {
                 rel="noopener noreferrer"
                 className="text-sm text-blue-600 hover:underline"
               >
-                Nghe trên Deezer
+                Listening in Deezer
               </a>
             </div>
           </li>
