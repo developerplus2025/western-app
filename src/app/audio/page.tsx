@@ -1,5 +1,6 @@
 "use client";
 
+import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -21,10 +22,10 @@ export default function AudioPage() {
     <div className="mx-auto max-w-xl px-4 py-6">
       <h1 className="mb-4 text-center text-2xl font-bold">Tìm kiếm bài hát</h1>
 
-      <input
+      <Input
         type="text"
         placeholder="Nhập từ khóa..."
-        className="mb-6 w-full rounded border border-gray-300 px-4 py-2"
+        className="rounded-lg"
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
