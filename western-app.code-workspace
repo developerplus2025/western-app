@@ -1,0 +1,24 @@
+{
+  "folders": [
+	{
+		"name": "western-app",
+		"path": "."
+	},
+	{
+		"name": "flora-vf",
+		"path": "../flora-vf"
+	},
+	{
+		"name": "flora-desktop",
+		"path": "../flora-desktop"
+	},
+	{
+		"name": "manimations",
+		"path": "../../Downloads/manimations"
+	}
+],
+  "settings": {
+    "svg.preview.background": "white",
+    "githubPullRequests.ignoredPullRequestBranches": ["main"]
+  }
+}

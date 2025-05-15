@@ -1,0 +1,59 @@
+"use client";
+
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+
+export default function AudioPage() {
+  const [keyword, setKeyword] = useState("eminem"); // keyword mặc định
+  const [songs, setSongs] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchSongs = async () => {
+      if (!keyword.trim()) return;
+      const res = await fetch(`/api/deezer?q=${encodeURIComponent(keyword)}`);
+      const data = await res.json();
+      setSongs(data.data);
+    };
+    fetchSongs();
+  }, [keyword]); // mỗi khi keyword thay đổi, gọi API
+
+  return (
+    <div className="mx-auto max-w-xl px-4 py-6">
+      <h1 className="mb-4 text-center text-2xl font-bold">Tìm kiếm bài hát</h1>
+
+      <input
+        type="text"
+        placeholder="Nhập từ khóa..."
+        className="mb-6 w-full rounded border border-gray-300 px-4 py-2"
+        value={keyword}
+        onChange={(e) => setKeyword(e.target.value)}
+      />
+
+      <ul className="space-y-4">
+        {songs.map((song) => (
+          <li key={song.id} className="flex items-center space-x-4">
+            <Image
+              src={song.album.cover_small}
+              alt={song.title}
+              width={50}
+              height={50}
+            />
+            <div>
+              <p className="font-medium">
+                {song.title} - {song.artist.name}
+              </p>
+              <a
+                href={song.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-blue-600 hover:underline"
+              >
+                Nghe trên Deezer
+              </a>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
