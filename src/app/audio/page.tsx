@@ -20,7 +20,9 @@ export default function AudioPage() {
 
   return (
     <div className="px-4 py-6">
-      <h1 className="mb-4 text-center text-2xl font-bold">Search Song</h1>
+      <h1 className="mb-4 text-center text-2xl font-bold">
+        The Engine Search Song
+      </h1>
       <div className="flex justify-center">
         <div className="relative">
           <Input
@@ -52,9 +54,10 @@ export default function AudioPage() {
         {songs.map((song) => (
           <li
             key={song.id}
-            className="flex flex-col items-center gap-4 space-x-4 rounded-lg border px-2 py-2"
+            className="flex flex-col items-center gap-4 space-x-4 rounded-lg px-2 py-2"
           >
             <Image
+              className="rounded-xl"
               unoptimized
               src={song.album.cover_medium}
               alt={song.title}
