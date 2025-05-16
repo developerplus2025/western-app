@@ -30,11 +30,11 @@ export default function AudioPage() {
         onChange={(e) => setKeyword(e.target.value)}
       />
 
-      <ul className="mt-[2rem] grid w-[1000px] grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem] space-y-4">
+      <ul className="mt-[2rem] grid w-[1200px] grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem] space-y-4">
         {songs.map((song) => (
           <li
             key={song.id}
-            className="flex items-center space-x-4 rounded-lg border px-2"
+            className="flex h-[68px] w-[225px] items-center space-x-4 rounded-lg border px-2 py-2"
           >
             <Image
               unoptimized
