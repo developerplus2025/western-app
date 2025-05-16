@@ -46,7 +46,7 @@ export default function AudioPage() {
           />
         </svg>
       </div>
-      <ul className="mt-[2rem] grid w-[1200px] grid-cols-4 place-items-center justify-items-center gap-x-[1rem] gap-y-[2rem] space-y-4">
+      <ul className="mt-[2rem] grid w-[1200px] grid-cols-4 place-items-center justify-items-center gap-x-[1rem] gap-y-[2rem]">
         {songs.map((song) => (
           <li
             key={song.id}
