@@ -34,7 +34,7 @@ export default function AudioPage() {
         {songs.map((song) => (
           <li
             key={song.id}
-            className="flex h-[68px] w-[225px] items-center space-x-4 rounded-lg border px-2 py-2"
+            className="flex h-[76px] w-[225px] items-center space-x-4 rounded-lg border px-2 py-2"
           >
             <Image
               unoptimized
@@ -44,7 +44,7 @@ export default function AudioPage() {
               height={50}
             />
             <div>
-              <p className="font-medium">
+              <p className="text-sm font-medium">
                 {song.title} - {song.artist.name}
               </p>
               <a
