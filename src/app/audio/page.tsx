@@ -62,14 +62,14 @@ export default function AudioPage() {
               height={50}
             />
             <div>
-              <p className="text-sm font-medium">
+              <p className="text-xs font-medium">
                 {song.title} - {song.artist.name}
               </p>
               <a
                 href={song.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#858585] hover:underline"
+                className="text-xs text-[#858585] hover:underline"
               >
                 Listening in Deezer
               </a>
