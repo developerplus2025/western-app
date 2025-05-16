@@ -48,15 +48,15 @@ export default function AudioPage() {
           </svg>
         </div>
       </div>
-      <ul className="mt-[2rem] grid w-[1200px] grid-cols-4 place-items-center justify-items-center gap-x-[1rem] gap-y-[2rem]">
+      <ul className="mt-[2rem] grid w-[1200px] grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem]">
         {songs.map((song) => (
           <li
             key={song.id}
-            className="flex h-[76px] w-[225px] items-center space-x-4 rounded-lg border px-2 py-2"
+            className="flex flex-col items-center gap-4 space-x-4 rounded-lg border px-2 py-2"
           >
             <Image
               unoptimized
-              src={song.album.cover_small}
+              src={song.album.cover_medium}
               alt={song.title}
               width={50}
               height={50}
