@@ -58,8 +58,8 @@ export default function AudioPage() {
               unoptimized
               src={song.album.cover_medium}
               alt={song.title}
-              width={50}
-              height={50}
+              width={250}
+              height={250}
             />
             <div>
               <p className="text-xs font-medium">
