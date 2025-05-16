@@ -19,7 +19,7 @@ export default function AudioPage() {
   }, [keyword]); // mỗi khi keyword thay đổi, gọi API
 
   return (
-    <div className="mx-auto max-w-xl px-4 py-6">
+    <div className="grid grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem] px-4 py-6">
       <h1 className="mb-4 text-center text-2xl font-bold">Search Song</h1>
 
       <Input
@@ -32,8 +32,12 @@ export default function AudioPage() {
 
       <ul className="space-y-4">
         {songs.map((song) => (
-          <li key={song.id} className="flex items-center space-x-4">
-            <img
+          <li
+            key={song.id}
+            className="flex items-center space-x-4 rounded-lg border px-2"
+          >
+            <Image
+              unoptimized
               src={song.album.cover_small}
               alt={song.title}
               width={50}
