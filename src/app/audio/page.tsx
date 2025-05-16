@@ -31,10 +31,10 @@ export default function AudioPage() {
             placeholder="Enter keyword..."
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
-            className="w-[25rem] rounded-full pl-[35px]"
+            className="w-[25rem] rounded-full pl-[42px]"
           />
           <svg
-            className="absolute left-[20px] top-1/2 -translate-x-1/2 -translate-y-1/2 border-[#a1a1a1]"
+            className="absolute left-[26px] top-1/2 -translate-x-1/2 -translate-y-1/2 border-[#a1a1a1]"
             data-testid="geist-icon"
             height={16}
             strokeLinejoin="round"
