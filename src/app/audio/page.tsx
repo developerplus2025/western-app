@@ -19,7 +19,7 @@ export default function AudioPage() {
   }, [keyword]); // mỗi khi keyword thay đổi, gọi API
 
   return (
-    <div className="grid grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem] px-4 py-6">
+    <div className="px-4 py-6">
       <h1 className="mb-4 text-center text-2xl font-bold">Search Song</h1>
 
       <Input
@@ -30,7 +30,7 @@ export default function AudioPage() {
         onChange={(e) => setKeyword(e.target.value)}
       />
 
-      <ul className="space-y-4">
+      <ul className="mt-[2rem] grid w-[1000px] grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem] space-y-4">
         {songs.map((song) => (
           <li
             key={song.id}

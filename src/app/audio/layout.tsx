@@ -8,5 +8,9 @@ export default function AudioLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <section className="flex justify-center">{children}</section>;
+  return (
+    <section className="flex flex-col items-center justify-center">
+      {children}
+    </section>
+  );
 }
