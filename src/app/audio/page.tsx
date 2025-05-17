@@ -97,7 +97,7 @@ export default function AudioPage() {
                 <div className="flex flex-col gap-1">
                   <p className="text-xs font-medium">{song.title}</p>
                   <p className="text-xs font-medium text-[#a1a1a1]">
-                    {song.artist.name}
+                    by {song.artist.name}
                   </p>
                 </div>
               </div>
