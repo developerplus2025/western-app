@@ -74,7 +74,7 @@ export default function AudioPage() {
         {songs.map((song) => (
           <li
             key={song.id}
-            className="flex flex-col items-center gap-4 space-x-4 rounded-lg px-2 py-2"
+            className="flex flex-col items-center gap-4 rounded-lg px-2 py-2"
           >
             <Image
               className="rounded-xl"
@@ -84,7 +84,7 @@ export default function AudioPage() {
               width={250}
               height={250}
             />
-            <div className="flex items-center gap-[2rem]">
+            <div className="flex items-center gap-3 self-start">
               <Image
                 className="rounded-full"
                 unoptimized
@@ -93,7 +93,7 @@ export default function AudioPage() {
                 width={50}
                 height={50}
               ></Image>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-1">
                 <p className="text-xs font-medium">{song.title}</p>
                 <p className="text-xs font-medium text-[#a1a1a1]">
                   {song.artist.name}
