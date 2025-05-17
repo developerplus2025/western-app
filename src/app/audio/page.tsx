@@ -84,18 +84,21 @@ export default function AudioPage() {
               width={250}
               height={250}
             />
-            <div>
-              <p className="text-xs font-medium">
-                {song.title} - {song.artist.name}
-              </p>
-              <a
-                href={song.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-[#858585] hover:underline"
-              >
-                Listening in Deezer
-              </a>
+            <div className="flex items-center gap-[2rem]">
+              <Image
+                className="rounded-full"
+                unoptimized
+                src={song.artist.picture_small}
+                alt={song.title}
+                width={50}
+                height={50}
+              ></Image>
+              <div className="flex flex-col gap-4">
+                <p className="text-xs font-medium">{song.title}</p>
+                <p className="text-xs font-medium text-[#a1a1a1]">
+                  {song.artist.name}
+                </p>
+              </div>
             </div>
           </li>
         ))}
