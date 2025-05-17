@@ -74,7 +74,7 @@ export default function AudioPage() {
         {songs.map((song) => (
           <li
             key={song.id}
-            className="flex flex-col items-center gap-4 rounded-lg px-2 py-2"
+            className="flex flex-col gap-4 rounded-lg px-2 py-2"
           >
             <Image
               className="rounded-xl"
@@ -84,21 +84,45 @@ export default function AudioPage() {
               width={250}
               height={250}
             />
-            <div className="flex items-center gap-3 self-start">
-              <Image
-                className="rounded-full"
-                unoptimized
-                src={song.artist.picture_small}
-                alt={song.title}
-                width={50}
-                height={50}
-              ></Image>
-              <div className="flex flex-col gap-1">
-                <p className="text-xs font-medium">{song.title}</p>
-                <p className="text-xs font-medium text-[#a1a1a1]">
-                  {song.artist.name}
-                </p>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Image
+                  className="rounded-full"
+                  unoptimized
+                  src={song.artist.picture_small}
+                  alt={song.title}
+                  width={50}
+                  height={50}
+                ></Image>
+                <div className="flex flex-col gap-1">
+                  <p className="text-xs font-medium">{song.title}</p>
+                  <p className="text-xs font-medium text-[#a1a1a1]">
+                    {song.artist.name}
+                  </p>
+                </div>
               </div>
+              <Button
+                variant={"outline"}
+                className="rounded-full"
+                size={"icon"}
+              >
+                <svg
+                  data-testid="geist-icon"
+                  height={25}
+                  strokeLinejoin="round"
+                  viewBox="0 0 16 16"
+                  width={25}
+                  style={{ color: "currentcolor" }}
+                >
+                  <path
+                    fill="#666"
+                    fillRule="evenodd"
+                    d="M14.5 8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6 11l5.5-3L6 5v6Z"
+                    clipRule="evenodd"
+                    style={{ fill: "currentColor" }}
+                  />
+                </svg>
+              </Button>
             </div>
           </li>
         ))}
