@@ -116,7 +116,13 @@ const DialogContent = React.forwardRef<
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
               </DialogOverlay>
-              <DialogPrimitive.Content asChild forceMount ref={ref} {...props}>
+              <DialogPrimitive.Content
+                className="fixed translate-x-[-50%] translate-y-[-50%]"
+                asChild
+                forceMount
+                ref={ref}
+                {...props}
+              >
                 <motion.div
                   key="dialog-content"
                   initial={{
