@@ -103,7 +103,7 @@ export default function AudioPage() {
               </div>
               <Button
                 variant={"outline"}
-                className="rounded-full"
+                className="flex-shrink-0 rounded-full"
                 size={"icon"}
               >
                 <svg
