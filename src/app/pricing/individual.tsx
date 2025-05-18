@@ -1102,17 +1102,27 @@ export default function Individual() {
                         </AlertDialogTrigger>
                         <AlertDialogContent>
                           <AlertDialogHeader>
-                            <AlertDialogTitle className="flex items-center gap-[1rem]">
-                              <Input type="email" placeholder="Email" />
-                              <Button variant="outline">Subscribe</Button>
-                            </AlertDialogTitle>
-                            <AlertDialogDescription>
+                            <AlertDialogDescription className="text-center">
                               Please Enter Your Email To We Send Sale Code
                             </AlertDialogDescription>
+                            <AlertDialogTitle className="flex items-center gap-[1rem]">
+                              <div>
+                                <Input type="text" placeholder="First Name" />
+                              </div>
+                              <div>
+                                <Input type="text" placeholder="Last Name" />
+                              </div>
+                              <div>
+                                <Input type="email" placeholder="Email" />
+                              </div>
+                            </AlertDialogTitle>
                           </AlertDialogHeader>
                           <AlertDialogFooter>
                             <AlertDialogCancel>Cancel</AlertDialogCancel>
-                            <AlertDialogAction>Continue</AlertDialogAction>
+                            <AlertDialogAction>
+                              {" "}
+                              <Button variant="outline">Subscribe</Button>
+                            </AlertDialogAction>
                           </AlertDialogFooter>
                         </AlertDialogContent>
                       </AlertDialog>
