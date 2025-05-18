@@ -879,7 +879,7 @@ export default function Individual() {
           >
             <Card
               key={tier.title}
-              className={`flex flex-col ${tier.title === "Basic Plan" ? "hidden" : ""} rounded-lg border-[1px] dark:bg-[#000000]`}
+              className={`flex flex-col ${tier.title === "Basic Plan" ? "hidden" : ""} h-full rounded-lg border-[1px] dark:bg-[#000000]`}
             >
               <CardHeader
                 className={`${tier.title === "Starter Plan" ? "to-[#121212]" : tier.title === "Basic Plan" ? "to-[#121212]" : tier.title === "Plus Plan" ? "to-[#121212]" : "to-[#121212]"} space-y-2 rounded-t-lg bg-[#00000099] p-[1.5rem]`}
