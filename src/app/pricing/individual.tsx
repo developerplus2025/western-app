@@ -1105,23 +1105,18 @@ export default function Individual() {
                             <AlertDialogDescription className="text-center">
                               Please Enter Your Email To We Send Sale Code
                             </AlertDialogDescription>
-                            <AlertDialogTitle className="flex items-center gap-[1rem]">
-                              <div>
-                                <Input type="text" placeholder="First Name" />
-                              </div>
-                              <div>
-                                <Input type="text" placeholder="Last Name" />
-                              </div>
-                              <div>
-                                <Input type="email" placeholder="Email" />
-                              </div>
+                            <AlertDialogTitle className="flex flex-col items-center gap-[1rem]">
+                              <Input type="text" placeholder="First Name" />
+
+                              <Input type="text" placeholder="Last Name" />
+
+                              <Input type="email" placeholder="Email" />
                             </AlertDialogTitle>
                           </AlertDialogHeader>
                           <AlertDialogFooter>
                             <AlertDialogCancel>Cancel</AlertDialogCancel>
-                            <AlertDialogAction>
-                              {" "}
-                              <Button variant="outline">Subscribe</Button>
+                            <AlertDialogAction className="border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground">
+                              Subscribe
                             </AlertDialogAction>
                           </AlertDialogFooter>
                         </AlertDialogContent>
