@@ -873,7 +873,10 @@ export default function Individual() {
       </div>
       <div className="grid gap-[2rem] md:grid-cols-3">
         {pricingData.individual.map((tier) => (
-          <div className="rounded-lg border p-2" key={tier.price}>
+          <div
+            className={`${tier.title === "Basic Plan" ? "hidden" : ""} rounded-lg border p-2`}
+            key={tier.price}
+          >
             <Card
               key={tier.title}
               className={`flex flex-col ${tier.title === "Basic Plan" ? "hidden" : ""} rounded-lg border-[1px] dark:bg-[#000000]`}
