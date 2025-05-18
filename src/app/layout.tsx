@@ -23,8 +23,8 @@ import FrameVideo from "./home/components/frame-video";
 import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "WESTERN: Buy and Sell Pi Network",
-  description: "Lê Thanh Trung",
+  title: "Western: Buy and Sell Pi Network",
+  description: "Western App ",
 };
 export default function RootLayout({
   children,
