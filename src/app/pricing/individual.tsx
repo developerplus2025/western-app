@@ -960,7 +960,7 @@ export default function Individual() {
                   />
                 </NumberFlowGroup>
 
-                <CardDescription className="text-balance text-sm">
+                <CardDescription className="text-balance text-center text-sm">
                   {tier.description}
                 </CardDescription>
                 <div className="pt-[1rem]">
