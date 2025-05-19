@@ -884,7 +884,7 @@ export default function Individual() {
               <CardHeader
                 className={`${tier.title === "Starter Plan" ? "to-[#121212]" : tier.title === "Basic Plan" ? "to-[#121212]" : tier.title === "Plus Plan" ? "to-[#121212]" : "to-[#121212]"} space-y-2 rounded-t-lg bg-[#00000099] p-[1.5rem]`}
               >
-                <CardTitle className="text-[1.04rem] font-medium text-[#a1a1a1]">
+                <CardTitle className="text-base font-medium text-[#ffffff]">
                   <div className="flex items-center justify-between">
                     <p
                       className={`${tier.title === "Plus Plan" || tier.title === "Basic Plan" ? "hidden" : ""}`}
@@ -943,7 +943,7 @@ export default function Individual() {
                 </CardTitle>
                 <NumberFlowGroup>
                   <NumberFlow
-                    className="mb-4 flex items-center text-3xl font-medium"
+                    className="mb-4 flex items-center justify-center text-3xl font-medium"
                     value={
                       isYearly
                         ? parseFloat((tier.price * 12 * 2).toFixed(2))
