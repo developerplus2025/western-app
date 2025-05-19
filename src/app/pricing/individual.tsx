@@ -1196,7 +1196,9 @@ export default function Individual() {
 
                         {/* <CheckIcon className="h-[15px] w-[15px] flex-shrink-0 text-[#ffffff]" /> */}
                       </div>
-                      <p className="text-xs text-[white]">{feature.name}</p>
+                      <p className="text-center text-xs text-[white]">
+                        {feature.name}
+                      </p>
                     </li>
                   ))}
                 </ul>
