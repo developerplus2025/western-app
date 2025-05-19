@@ -874,7 +874,7 @@ export default function Individual() {
       <div className="grid gap-[1rem] md:grid-cols-3">
         {pricingData.individual.map((tier) => (
           <div
-            className={`${tier.title === "Basic Plan" ? "hidden" : ""} rounded-lg border p-2`}
+            className={`${tier.title === "Basic Plan" ? "hidden" : ""} rounded-lg border p-1`}
             key={tier.price}
           >
             <Card
@@ -1196,9 +1196,7 @@ export default function Individual() {
 
                         {/* <CheckIcon className="h-[15px] w-[15px] flex-shrink-0 text-[#ffffff]" /> */}
                       </div>
-                      <p className="text-center text-xs text-[white]">
-                        {feature.name}
-                      </p>
+                      <p className="text-xs text-[white]">{feature.name}</p>
                     </li>
                   ))}
                 </ul>
