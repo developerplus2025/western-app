@@ -92,7 +92,7 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BadgeCheck, HelpCircleIcon } from "lucide-react";
-import NumberFlow from "@number-flow/react";
+import NumberFlow, { NumberFlowGroup } from "@number-flow/react";
 import { CheckCircledIcon } from "@radix-ui/react-icons";
 
 const pricingData = {
@@ -941,24 +941,26 @@ export default function Individual() {
                     </div>
                   )}
                 </CardTitle>
-                <NumberFlow
-                  className="mb-4 flex items-center text-3xl font-bold"
-                  value={
-                    isYearly
-                      ? parseFloat((tier.price * 12 * 2).toFixed(2))
-                      : tier.price
-                  }
-                  locales="en-US"
-                  // format={{ style: "currency", currency: "USD" }}
-                  format={{
-                    style: "currency",
-                    currency: "USD",
-                    trailingZeroDisplay: "stripIfInteger",
-                  }}
-                  suffix={`per user / ${isYearly ? "year" : "month"}`}
-                />
+                <NumberFlowGroup>
+                  <NumberFlow
+                    className="mb-4 flex items-center text-3xl font-medium"
+                    value={
+                      isYearly
+                        ? parseFloat((tier.price * 12 * 2).toFixed(2))
+                        : tier.price
+                    }
+                    locales="en-US"
+                    // format={{ style: "currency", currency: "USD" }}
+                    format={{
+                      style: "currency",
+                      currency: "USD",
+                      trailingZeroDisplay: "stripIfInteger",
+                    }}
+                    suffix={`per user / ${isYearly ? "year" : "month"}`}
+                  />
+                </NumberFlowGroup>
 
-                <CardDescription className="text-md">
+                <CardDescription className="text-balance text-sm">
                   {tier.description}
                 </CardDescription>
                 <div className="pt-[1rem]">
@@ -1194,7 +1196,7 @@ export default function Individual() {
 
                         {/* <CheckIcon className="h-[15px] w-[15px] flex-shrink-0 text-[#ffffff]" /> */}
                       </div>
-                      <p className="text-sm text-[white]">{feature.name}</p>
+                      <p className="text-xs text-[white]">{feature.name}</p>
                     </li>
                   ))}
                 </ul>
