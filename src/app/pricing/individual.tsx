@@ -860,7 +860,7 @@ export default function Individual() {
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
-      className="px-[11rem]"
+      className="px-[16rem]"
     >
       <div className="mb-[3rem] mt-4 flex items-center justify-center space-x-2">
         <span className="text-sm">Monthly</span>
@@ -871,7 +871,7 @@ export default function Individual() {
         />
         <span className="text-sm">Yearly (10% off)</span>
       </div>
-      <div className="grid gap-[2rem] md:grid-cols-3">
+      <div className="grid gap-[1rem] md:grid-cols-3">
         {pricingData.individual.map((tier) => (
           <div
             className={`${tier.title === "Basic Plan" ? "hidden" : ""} rounded-lg border p-2`}
