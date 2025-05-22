@@ -999,9 +999,9 @@ export default function Individual() {
                 </ul>
               </CardContent>
               <CardFooter className="items-center justify-center px-[2rem] pb-[2rem]">
-                <div className="pt-[1rem]">
+                <div className="w-full pt-[1rem]">
                   {tier.title === "Pro Plan" && (
-                    <div className="flex items-center justify-center gap-4">
+                    <div className="flex w-full items-center justify-center gap-4">
                       {" "}
                       <AlertDialog>
                         <AlertDialogTrigger asChild>

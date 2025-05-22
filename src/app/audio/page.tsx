@@ -74,7 +74,7 @@ export default function AudioPage() {
         {songs.map((song) => (
           <li
             key={song.id}
-            className="flex flex-col gap-4 rounded-lg px-2 py-2"
+            className="flex w-fit flex-col gap-4 rounded-lg px-2 py-2"
           >
             <Image
               className="rounded-xl"
@@ -103,9 +103,30 @@ export default function AudioPage() {
               </div>
               <Button
                 variant={"outline"}
-                className="flex-shrink-0 rounded-full"
+                className="hidden flex-shrink-0 rounded-full"
                 size={"icon"}
               >
+                <svg
+                  data-testid="geist-icon"
+                  height={25}
+                  strokeLinejoin="round"
+                  viewBox="0 0 16 16"
+                  width={25}
+                  style={{ color: "currentcolor" }}
+                >
+                  <path
+                    fill="#666"
+                    fillRule="evenodd"
+                    d="M14.5 8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6 11l5.5-3L6 5v6Z"
+                    clipRule="evenodd"
+                    style={{ fill: "currentColor" }}
+                  />
+                </svg>
+              </Button>
+            </div>
+            <div className="w-full">
+              <Button variant={"outline"}>
+                Listen Now{" "}
                 <svg
                   data-testid="geist-icon"
                   height={25}
