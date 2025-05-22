@@ -91,8 +91,8 @@ export default function AudioPage() {
                   unoptimized
                   src={song.artist.picture_small}
                   alt={song.title}
-                  width={50}
-                  height={50}
+                  width={40}
+                  height={40}
                 ></Image>
                 <div className="flex flex-col gap-1">
                   <p className="text-xs font-medium">{song.title}</p>
@@ -101,28 +101,23 @@ export default function AudioPage() {
                   </p>
                 </div>
               </div>
-              <Button
-                variant={"outline"}
-                className="hidden flex-shrink-0 rounded-full"
-                size={"icon"}
-              >
+              <div className="flex-shrink-0">
                 <svg
                   data-testid="geist-icon"
-                  height={25}
+                  height={16}
                   strokeLinejoin="round"
+                  style={{ color: "currentColor" }}
                   viewBox="0 0 16 16"
-                  width={25}
-                  style={{ color: "currentcolor" }}
+                  width={16}
                 >
                   <path
-                    fill="#666"
                     fillRule="evenodd"
-                    d="M14.5 8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6 11l5.5-3L6 5v6Z"
                     clipRule="evenodd"
-                    style={{ fill: "currentColor" }}
+                    d="M7.06463 3.20474C5.79164 1.93175 3.72772 1.93175 2.45474 3.20474C1.18175 4.47773 1.18175 6.54166 2.45474 7.81465L8 13.3599L13.5453 7.81465C14.8182 6.54166 14.8182 4.47773 13.5453 3.20474C12.2723 1.93175 10.2084 1.93175 8.93537 3.20474L8.53033 3.60979L8 4.14012L7.46967 3.60979L7.06463 3.20474ZM8 2.02321C6.13348 0.286219 3.21165 0.326509 1.39408 2.14408C-0.464694 4.00286 -0.464691 7.01653 1.39408 8.87531L7.46967 14.9509L8 15.4812L8.53033 14.9509L14.6059 8.87531C16.4647 7.01653 16.4647 4.00286 14.6059 2.14408C12.7884 0.326509 9.86653 0.286221 8 2.02321Z"
+                    fill="currentColor"
                   />
                 </svg>
-              </Button>
+              </div>
             </div>
             <div className="flex items-center justify-between">
               <p className="text-xs text-[#a1a1a1]">Rank: {song.rank}</p>
