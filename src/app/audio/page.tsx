@@ -6,7 +6,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function AudioPage() {
-  const [keyword, setKeyword] = useState("ercv"); // keyword mặc định
+  const [keyword, setKeyword] = useState("amd"); // keyword mặc định
   const [songs, setSongs] = useState<any[]>([]);
 
   useEffect(() => {
@@ -129,10 +129,10 @@ export default function AudioPage() {
               <p className="text-xs text-[#a1a1a1]">
                 Duration: {song.duration}
               </p>
-              <p className="text-xs text-[#a1a1a1]">Id {song.id}</p>
+              <p className="text-xs text-[#a1a1a1]">Id: {song.id}</p>
             </div>
             <div className="w-full">
-              <Button variant={"default"} className="w-full rounded-full">
+              <Button variant={"outline"} className="w-full rounded-full">
                 Listen Now{" "}
                 <svg
                   data-testid="geist-icon"
