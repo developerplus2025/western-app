@@ -127,11 +127,9 @@ export default function AudioPage() {
             <div className="flex items-center justify-between">
               <p className="text-xs text-[#a1a1a1]">Rank: {song.rank}</p>
               <p className="text-xs text-[#a1a1a1]">
-                Album: {song.artist.nb_album}
+                Duration: {song.duration}
               </p>
-              <p className="text-xs text-[#a1a1a1]">
-                Fan: {song.artist.nb_fan}
-              </p>
+              <p className="text-xs text-[#a1a1a1]">Id {song.id}</p>
             </div>
             <div className="w-full">
               <Button variant={"default"} className="w-full rounded-full">
