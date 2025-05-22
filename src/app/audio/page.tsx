@@ -125,7 +125,7 @@ export default function AudioPage() {
               </Button>
             </div>
             <div className="w-full">
-              <Button variant={"outline"}>
+              <Button variant={"default"} className="w-full rounded-full">
                 Listen Now{" "}
                 <svg
                   data-testid="geist-icon"
