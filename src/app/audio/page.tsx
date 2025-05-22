@@ -125,7 +125,7 @@ export default function AudioPage() {
               </Button>
             </div>
             <div className="flex items-center justify-between">
-              <p className="text-sm">{song.chart.rank}</p>
+              <p className="text-sm">{song.rank}</p>
               <p className="text-sm">{song.artist.nb_album}</p>
               <p className="text-sm">{song.artist.nb_fan}</p>
             </div>
