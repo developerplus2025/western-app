@@ -22,7 +22,7 @@ export default function AudioPage() {
   }, [keyword]); // mỗi khi keyword thay đổi, gọi API
   if (!loading) {
     return (
-      <div className="mx-auto">
+      <div className="mx-auto flex h-[calc(100vh-58.8px)] items-center justify-center">
         <Loader variant={"classic"} />
       </div>
     );
