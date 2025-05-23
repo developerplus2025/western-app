@@ -9,9 +9,10 @@ import React, { useEffect, useState } from "react";
 export default function AudioPage() {
   const [keyword, setKeyword] = useState("amd"); // keyword mặc định
   const [songs, setSongs] = useState<any[]>([]);
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const fetchSongs = async () => {
+      setLoading(true);
       if (!keyword.trim()) return;
       const res = await fetch(`/api/deezer?q=${encodeURIComponent(keyword)}`);
       const data = await res.json();
@@ -19,7 +20,7 @@ export default function AudioPage() {
     };
     fetchSongs();
   }, [keyword]); // mỗi khi keyword thay đổi, gọi API
-  if (!songs) {
+  if (!loading) {
     return (
       <div className="mx-auto">
         <p>Loading</p>
