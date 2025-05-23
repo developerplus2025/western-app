@@ -94,7 +94,7 @@ export default function AudioPage() {
                   width={40}
                   height={40}
                 ></Image>
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col">
                   <p className="text-xs font-medium">{song.title}</p>
                   <p className="text-xs font-medium text-[#a1a1a1]">
                     by {song.artist.name}
@@ -120,7 +120,7 @@ export default function AudioPage() {
               </div>
             </div>
             <div className="flex flex-row-reverse items-center justify-between pt-2">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-1">
                 <svg
                   data-testid="geist-icon"
                   height={16}
@@ -139,7 +139,7 @@ export default function AudioPage() {
 
                 <p className="text-xs text-[#a1a1a1]">{song.duration}s</p>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-1">
                 <svg
                   data-testid="geist-icon"
                   height={16}
@@ -158,7 +158,7 @@ export default function AudioPage() {
 
                 <p className="text-xs text-[#a1a1a1]">1.4k</p>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-1">
                 <svg
                   data-testid="geist-icon"
                   height={16}
