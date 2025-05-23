@@ -119,12 +119,64 @@ export default function AudioPage() {
                 </svg>
               </div>
             </div>
-            <div className="flex items-center justify-between">
-              <p className="text-xs text-[#a1a1a1]">Rank: {song.rank}</p>
-              <p className="text-xs text-[#a1a1a1]">
-                Duration: {song.duration}
-              </p>
-              <p className="text-xs text-[#a1a1a1]">Id: {song.id}</p>
+            <div className="flex flex-row-reverse items-center justify-between">
+              <div className="flex flex-col items-center">
+                <svg
+                  data-testid="geist-icon"
+                  height={16}
+                  strokeLinejoin="round"
+                  viewBox="0 0 16 16"
+                  width={16}
+                  style={{ color: "currentcolor" }}
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM8.75 4.75V4H7.25V4.75V7.875C7.25 8.18976 7.39819 8.48615 7.65 8.675L9.55 10.1L10.15 10.55L11.05 9.35L10.45 8.9L8.75 7.625V4.75Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <p className="text-xs text-[#a1a1a1]">{song.duration}s</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <svg
+                  data-testid="geist-icon"
+                  height={16}
+                  strokeLinejoin="round"
+                  viewBox="0 0 16 16"
+                  width={16}
+                  style={{ color: "currentcolor" }}
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8 1C4.13401 1 1 4.13401 1 8V11H1.75H2.5H3.25C4.35457 11 5.25 10.1046 5.25 9V8.25C5.25 7.14543 4.35457 6.25 3.25 6.25H2.78426C3.51526 4.0704 5.57424 2.5 8 2.5C10.4258 2.5 12.4847 4.0704 13.2157 6.25H12.75C11.6454 6.25 10.75 7.14543 10.75 8.25V9C10.75 10.1046 11.6454 11 12.75 11H13.5C13.5 12.3807 12.3807 13.5 11 13.5H10V13C10 12.4477 9.55229 12 9 12H7C6.44772 12 6 12.4477 6 13V14C6 14.5523 6.44772 15 7 15H9H10H11C13.2091 15 15 13.2091 15 11V8C15 4.13401 11.866 1 8 1ZM12.75 7.75H13.4944C13.4981 7.83287 13.5 7.91622 13.5 8V9.5H12.75C12.4739 9.5 12.25 9.27614 12.25 9V8.25C12.25 7.97386 12.4739 7.75 12.75 7.75ZM2.50558 7.75C2.50187 7.83287 2.5 7.91622 2.5 8V9.5H3.25C3.52614 9.5 3.75 9.27614 3.75 9V8.25C3.75 7.97386 3.52614 7.75 3.25 7.75H2.50558Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <p className="text-xs text-[#a1a1a1]">1.4k</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <svg
+                  data-testid="geist-icon"
+                  height={16}
+                  strokeLinejoin="round"
+                  viewBox="0 0 16 16"
+                  width={16}
+                  style={{ color: "currentcolor" }}
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8.75 1V1.75V14.25V15H7.25V14.25V1.75V1H8.75ZM3.5 9V9.75V14.25V15H2V14.25V9.75V9H3.5ZM14 6.75V6H12.5V6.75V14.25V15H14V14.25V6.75Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <p className="text-xs text-[#a1a1a1]">#12</p>
+              </div>
             </div>
             <div className="w-full">
               <Button variant={"outline"} className="w-full rounded-full">
