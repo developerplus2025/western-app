@@ -16,7 +16,9 @@ export default function AudioPage() {
       const res = await fetch(`/api/deezer?q=${encodeURIComponent(keyword)}`);
       const data = await res.json();
       setSongs(data.data);
-      setLoading(true);
+      setTimeout(function () {
+        setLoading(true);
+      }, 1000);
     };
     fetchSongs();
   }, [keyword]); // mỗi khi keyword thay đổi, gọi API
