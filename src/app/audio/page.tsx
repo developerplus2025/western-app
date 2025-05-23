@@ -180,7 +180,7 @@ export default function AudioPage() {
                 <p className="text-xs text-[#a1a1a1]">1k</p>
               </div>
             </div>
-            <div className="w-full items-center gap-4">
+            <div className="flex w-full items-center gap-4">
               <Button variant={"outline"} className="w-full rounded-full">
                 Listen Now{" "}
                 <svg
@@ -200,7 +200,7 @@ export default function AudioPage() {
                   />
                 </svg>
               </Button>
-              <Button>
+              <Button className="rounded-full">
                 <svg
                   data-testid="geist-icon"
                   height={16}
