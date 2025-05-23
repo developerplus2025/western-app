@@ -7,7 +7,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function AudioPage() {
-  const [keyword, setKeyword] = useState("amd"); // keyword mặc định
+  const [keyword, setKeyword] = useState("react"); // keyword mặc định
   const [songs, setSongs] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
