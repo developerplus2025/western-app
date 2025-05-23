@@ -22,6 +22,7 @@ export default function AudioPage() {
   if (!songs) {
     return (
       <div className="mx-auto">
+        <p>Loading</p>
         <Loader variant={"classic"} />
       </div>
     );
