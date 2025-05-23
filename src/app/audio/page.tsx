@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Loader } from "@/components/ui/loader";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -18,7 +19,13 @@ export default function AudioPage() {
     };
     fetchSongs();
   }, [keyword]); // mỗi khi keyword thay đổi, gọi API
-
+  if (!songs) {
+    return (
+      <div className="mx-auto">
+        <Loader variant={"classic"} />
+      </div>
+    );
+  }
   return (
     <div className="px-4 py-6">
       <h1 className="mb-4 text-center text-2xl font-bold">
