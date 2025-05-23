@@ -74,7 +74,7 @@ export default function AudioPage() {
         {songs.map((song) => (
           <li
             key={song.id}
-            className="flex w-fit flex-col gap-4 rounded-lg px-2 py-2"
+            className="flex w-fit flex-col gap-2 rounded-lg px-2 py-2"
           >
             <Image
               className="rounded-xl"
@@ -119,7 +119,7 @@ export default function AudioPage() {
                 </svg>
               </div>
             </div>
-            <div className="flex flex-row-reverse items-center justify-between">
+            <div className="flex flex-row-reverse items-center justify-between pt-2">
               <div className="flex flex-col items-center">
                 <svg
                   data-testid="geist-icon"
