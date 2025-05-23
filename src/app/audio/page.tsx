@@ -12,18 +12,17 @@ export default function AudioPage() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const fetchSongs = async () => {
-      setLoading(true);
       if (!keyword.trim()) return;
       const res = await fetch(`/api/deezer?q=${encodeURIComponent(keyword)}`);
       const data = await res.json();
       setSongs(data.data);
+      setLoading(true);
     };
     fetchSongs();
   }, [keyword]); // mỗi khi keyword thay đổi, gọi API
   if (!loading) {
     return (
       <div className="mx-auto">
-        <p>Loading</p>
         <Loader variant={"classic"} />
       </div>
     );
