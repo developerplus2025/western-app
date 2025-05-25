@@ -9,5 +9,10 @@ export default function DesignLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div>{children}</div>;
+  return (
+    <div className="flex flex-col-reverse">
+      <div className="flex h-[58.8px] border-b"></div>
+      {children}
+    </div>
+  );
 }
