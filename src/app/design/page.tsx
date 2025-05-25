@@ -16,8 +16,8 @@ import {
 } from "@phosphor-icons/react";
 export default function DesignPage() {
   return (
-    <div className="flex h-[calc(100vh-58.8px)] w-full items-center px-4">
-      <div className="flex h-[80px] w-full items-center justify-between border px-[2rem]">
+    <div className="flex h-[calc(100vh-58.8px)] w-full items-end px-4">
+      <div className="flex h-[80px] w-full items-center justify-between border-t px-[2rem]">
         <div className="flex items-center gap-3">
           <div className="h-[50px] w-[50px] rounded-lg border"></div>
           <div className="flex flex-col">

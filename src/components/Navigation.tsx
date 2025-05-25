@@ -189,6 +189,7 @@ export const Navigation = (): JSX.Element => {
   const isSignIn = pathname === "/signin";
   const isCreative = pathname === "/creative";
   const isGeneration = pathname === "/generation";
+  const isDesign = pathname === "/design";
   const theme = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBottom, setIsBottom] = useState(false);
@@ -220,6 +221,7 @@ export const Navigation = (): JSX.Element => {
         isGuides ||
         isDocs ||
         isHelp ||
+        isDesign ||
         pathname.startsWith("/docs")
           ? "webfilm-class"
           : ""
@@ -477,6 +479,27 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Blog
+                      </TextHoverEnter>
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem className="px-3">
+                  <Link href="/design" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={`relative flex h-7 items-center rounded-full text-sm duration-300 ease-out ${
+                        pathname === "/design"
+                          ? "dark:text-white"
+                          : "dark:text-[#9b9b9b]"
+                      } cursor-pointer select-none transition-colors dark:hover:text-white`}
+                    >
+                      <TextHoverEnter
+                        className={`${
+                          pathname === "/design"
+                            ? "dark:text-white"
+                            : "dark:text-[#9b9b9b]"
+                        }`}
+                      >
+                        Design
                       </TextHoverEnter>
                     </NavigationMenuLink>
                   </Link>
