@@ -1,4 +1,8 @@
 import { Slider } from "@/components/ui/slider";
+import { cookies } from "next/headers";
+
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "./components/app-sidebar";
 import {
   AirplayIcon,
   DevicesIcon,
@@ -14,9 +18,21 @@ import {
   SpeakerHighIcon,
   SpeakerLowIcon,
 } from "@phosphor-icons/react";
-export default function DesignPage() {
+import React from "react";
+export default async function DesignPage() {
+  const cookieStore = await cookies();
+  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
   return (
-    <div className="flex h-[calc(100vh-58.8px)] w-full items-end px-4">
+    <div className="flex h-[calc(100vh-58.8px)] w-full flex-col justify-between">
+      <div>
+        <SidebarProvider defaultOpen={defaultOpen}>
+          <AppSidebar />
+          <main>
+            <SidebarTrigger />
+            <div>/</div>
+          </main>
+        </SidebarProvider>
+      </div>
       <div className="flex h-[80px] w-full items-center justify-between border-t px-[2rem]">
         <div className="flex items-center gap-3">
           <div className="h-[50px] w-[50px] rounded-lg border"></div>
