@@ -87,14 +87,9 @@ export default function DesignPage() {
               <path d="M24,128A72.08,72.08,0,0,1,96,56H204.69L194.34,45.66a8,8,0,0,1,11.32-11.32l24,24a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L204.69,72H96a56.06,56.06,0,0,0-56,56,8,8,0,0,1-16,0Zm200-8a8,8,0,0,0-8,8,56.06,56.06,0,0,1-56,56H51.31l10.35-10.34a8,8,0,0,0-11.32-11.32l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L51.31,200H160a72.08,72.08,0,0,0,72-72A8,8,0,0,0,224,120Z"></path>
             </svg>
           </div>
-          <div className="flex w-[25rem] gap-[1rem]">
+          <div className="flex w-[25rem] items-center gap-[1rem]">
             <p className="text-xs">0:00</p>
-            <Slider
-              className="h-[1px]"
-              defaultValue={[33]}
-              max={100}
-              step={1}
-            />
+            <Slider className="" defaultValue={[33]} max={100} step={1} />
             <p className="text-xs">2:04</p>
           </div>
         </div>
@@ -155,7 +150,7 @@ export default function DesignPage() {
             <path d="M155.51,24.81a8,8,0,0,0-8.42.88L77.25,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H77.25l69.84,54.31A8,8,0,0,0,160,224V32A8,8,0,0,0,155.51,24.81ZM32,96H72v64H32ZM144,207.64,88,164.09V91.91l56-43.55ZM208,128a39.93,39.93,0,0,1-10,26.46,8,8,0,0,1-12-10.58,24,24,0,0,0,0-31.72,8,8,0,1,1,12-10.58A40,40,0,0,1,208,128Z"></path>
           </svg>
 
-          <Slider className="h-[1px]" defaultValue={[33]} max={100} step={1} />
+          <Slider defaultValue={[33]} max={100} step={1} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
