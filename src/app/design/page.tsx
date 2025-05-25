@@ -27,8 +27,8 @@ export default async function DesignPage() {
       <div>
         <SidebarProvider defaultOpen={defaultOpen}>
           <AppSidebar />
-          <main>
-            <SidebarTrigger />
+          <main className="flex h-[calc(100vh-58.8px)] w-full flex-col justify-between">
+            <SidebarTrigger className="m-[1rem]" />
             <div className="flex h-[80px] w-full items-center justify-between border-t px-[2rem]">
               <div className="flex items-center gap-3">
                 <div className="h-[50px] w-[50px] rounded-lg border"></div>
