@@ -44,7 +44,7 @@ export default function DesignPage() {
   return (
     <div className="flex h-[calc(100vh-58.8px)] w-full flex-col justify-between">
       <div>
-        <SidebarProvider defaultOpen={true}>
+        <SidebarProvider defaultOpen={false}>
           <AppSidebar />
           <main className="flex h-[calc(100vh-58.8px)] w-full flex-col justify-between">
             <SidebarTrigger className="m-[1rem]" />
