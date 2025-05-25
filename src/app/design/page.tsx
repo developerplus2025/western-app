@@ -49,7 +49,7 @@ export default function DesignPage() {
           <main className="flex h-[calc(100vh-58.8px)] w-full flex-col justify-between">
             <SidebarTrigger className="m-[1rem]" />
             <ScrollArea className="flex h-[calc(100vh-203px)] w-full justify-center">
-              <div className="h-[calc(100vh-203px)] w-full">
+              <div className="flex h-[calc(100vh-203px)] w-full justify-center">
                 <div className="px-4 py-6">
                   <div className="flex items-center justify-center gap-4">
                     <div className="relative">
