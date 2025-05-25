@@ -21,8 +21,10 @@ export default function DesignPage() {
         <div className="flex items-center gap-3">
           <div className="h-[50px] w-[50px] rounded-lg border"></div>
           <div className="flex flex-col">
-            <p className="text-xs">The Specture</p>
-            <p className="text-xs text-[#a1a1a1]">Alan Walker</p>
+            <p className="text-xs">
+              REACT (feat. Ella Henderson) (Sam Feldt Remix)
+            </p>
+            <p className="text-xs text-[#a1a1a1]">by lan Walker</p>
           </div>
           <div>
             <svg
@@ -91,7 +93,7 @@ export default function DesignPage() {
             <p className="text-xs">2:04</p>
           </div>
         </div>
-        <div className="[&_svg-[shrink-0]] sh flex w-[16rem] items-center gap-4">
+        <div className="sh flex w-[16rem] items-center gap-4 [&_svg]:shrink-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
