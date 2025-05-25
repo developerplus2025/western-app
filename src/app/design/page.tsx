@@ -91,7 +91,7 @@ export default function DesignPage() {
             <p className="text-xs">2:04</p>
           </div>
         </div>
-        <div className="flex w-[16rem] items-center gap-4">
+        <div className="[&_svg-[shrink-0]] sh flex w-[16rem] items-center gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
