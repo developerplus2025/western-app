@@ -2,26 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useEffect, useState } from "react";
+import { useSearch } from "../content/SearchContext";
 
 export default function SearchUi() {
-  const [keyword, setKeyword] = useState("react"); // keyword mặc định
-  const [songs, setSongs] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const fetchSongs = async () => {
-      if (!keyword.trim()) return;
-      const res = await fetch(`/api/deezer?q=${encodeURIComponent(keyword)}`);
-      const data = await res.json();
-      setSongs(data.data);
-      setTimeout(function () {
-        setLoading(true);
-      }, 1000);
-    };
-    fetchSongs();
-  }, [keyword]); // mỗi khi keyword thay đổi, gọi API
+  const { keyword, setKeyword } = useSearch();
   return (
     <div>
-      <div className="flex items-center justify-center gap-4">
+      <div className="flex items-center justify-center gap-4 [&_svg]:h-[20px] [&_svg]:w-[20px]">
         <div className="relative">
           <Input
             type="search"
@@ -47,25 +34,15 @@ export default function SearchUi() {
             />
           </svg>
         </div>
-        <div>
-          <Button className="rounded-full" variant={"outline"} size={"icon"}>
-            <svg
-              data-testid="geist-icon"
-              height={16}
-              strokeLinejoin="round"
-              viewBox="0 0 16 16"
-              width={16}
-              style={{ color: "currentcolor" }}
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M8.50098 1.5H7.50098C6.67255 1.5 6.00098 2.17157 6.00098 3V7C6.00098 7.82843 6.67255 8.5 7.50098 8.5H8.50098C9.32941 8.5 10.001 7.82843 10.001 7V3C10.001 2.17157 9.32941 1.5 8.50098 1.5ZM7.50098 0C5.84412 0 4.50098 1.34315 4.50098 3V7C4.50098 8.65685 5.84412 10 7.50098 10H8.50098C10.1578 10 11.501 8.65685 11.501 7V3C11.501 1.34315 10.1578 0 8.50098 0H7.50098ZM7.25098 13.2088V15.25V16H8.75098V15.25V13.2088C11.5607 12.8983 13.8494 10.8635 14.5383 8.18694L14.7252 7.46062L13.2726 7.08673L13.0856 7.81306C12.5028 10.0776 10.4462 11.75 8.00098 11.75C5.55572 11.75 3.49918 10.0776 2.91633 7.81306L2.72939 7.08673L1.27673 7.46062L1.46368 8.18694C2.15258 10.8635 4.44128 12.8983 7.25098 13.2088Z"
-                fill="currentColor"
-              />
-            </svg>
-          </Button>
-        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#ffffff"
+          viewBox="0 0 256 256"
+        >
+          <path d="M128,176a48.05,48.05,0,0,0,48-48V64a48,48,0,0,0-96,0v64A48.05,48.05,0,0,0,128,176ZM96,64a32,32,0,0,1,64,0v64a32,32,0,0,1-64,0Zm40,143.6V240a8,8,0,0,1-16,0V207.6A80.11,80.11,0,0,1,48,128a8,8,0,0,1,16,0,64,64,0,0,0,128,0,8,8,0,0,1,16,0A80.11,80.11,0,0,1,136,207.6Z"></path>
+        </svg>
       </div>
     </div>
   );

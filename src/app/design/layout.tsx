@@ -1,6 +1,7 @@
 import { Slider } from "@/components/ui/slider";
 import type { Metadata } from "next";
 import SearchUi from "./components/search-ui";
+import { SearchProvider } from "./content/SearchContext";
 export const metadata: Metadata = {
   title: "Design | Western",
   description: "Western - Design",
@@ -29,7 +30,6 @@ export default function DesignLayout({
           >
             <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
           </svg>
-          <SearchUi />
         </div>
         <div className="flex items-center gap-[2rem] [&_svg]:h-[20px] [&_svg]:w-[20px]">
           <svg
@@ -61,7 +61,9 @@ export default function DesignLayout({
           </svg>
         </div>
       </div>
-      {children}
+      <SearchProvider>
+        {children} <SearchUi />
+      </SearchProvider>
       <div className="z-20 flex h-[80px] w-full items-center justify-between border-t bg-black px-[2rem]">
         <div className="flex items-center gap-3">
           <div className="h-[50px] w-[50px] rounded-lg border"></div>
