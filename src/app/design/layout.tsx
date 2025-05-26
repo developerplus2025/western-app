@@ -21,7 +21,7 @@ export default function DesignLayout({
               WESTERN
             </p>
           </div>
-          <div className="flex items-center gap-[1rem]">
+          <div className="flex items-center gap-[1rem] [&_svg]:h-[20px] [&_svg]:w-[20px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
