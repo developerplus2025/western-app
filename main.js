@@ -13,7 +13,7 @@ function createWindow() {
     }, // Loại bỏ khung mặc định của hệ điều hành
   });
 
-  win.loadURL("http://localhost:3000/webapp");
+  win.loadURL("http://western-app.vercel.app/design");
 }
 
 app.whenReady().then(() => {
