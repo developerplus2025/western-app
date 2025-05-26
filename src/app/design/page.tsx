@@ -33,15 +33,15 @@ export default function DesignPage() {
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />
           <main className="flex h-[calc(100vh-138.8px)] w-full flex-col justify-between">
-            <SidebarTrigger className="fixed z-20" />
+            <SidebarTrigger className="fixed z-20 m-[0.5rem]" />
             <ScrollArea className="flex h-[calc(100vh-138.8px)] w-full justify-center">
               <div className="flex h-[calc(100vh-138.8px)] w-full justify-center">
                 <div className="px-4 pt-[2rem]">
-                  <ul className="grid w-[1200px] grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem]">
+                  <ul className="grid w-[1355px] grid-cols-5 justify-items-center gap-x-[1rem] gap-y-[2rem]">
                     {songs.map((song) => (
                       <li
                         key={song.id}
-                        className="flex w-fit flex-col gap-2 rounded-lg px-2 py-2"
+                        className="flex h-full w-fit flex-col justify-between gap-2 rounded-lg px-2 py-2"
                       >
                         <Image
                           className="rounded-xl"
