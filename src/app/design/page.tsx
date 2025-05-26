@@ -42,7 +42,7 @@ export default function DesignPage() {
   }, [keyword]); // mỗi khi keyword thay đổi, gọi API
 
   return (
-    <div className="flex h-[calc(100vh-58.8px)] w-full flex-col justify-between">
+    <div className="flex h-[calc(100vh-138.8px)] w-full flex-col justify-between">
       <div>
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />

@@ -14,7 +14,7 @@ export default function DesignLayout({
     <div className="flex flex-col">
       <div className="flex h-[58.8px] border-b"></div>
       {children}
-      <div className="flex h-[80px] w-full items-center justify-between border-t px-[2rem]">
+      <div className="z-20 flex h-[80px] w-full items-center justify-between border-t px-[2rem]">
         <div className="flex items-center gap-3">
           <div className="h-[50px] w-[50px] rounded-lg border"></div>
           <div className="flex flex-col">
