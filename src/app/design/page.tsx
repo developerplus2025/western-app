@@ -46,10 +46,10 @@ export default function DesignPage() {
       <div>
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />
-          <main className="flex h-[calc(100vh-58.8px)] w-full flex-col justify-between">
+          <main className="flex h-[calc(100vh-138.8px)] w-full flex-col justify-between">
             <SidebarTrigger className="m-[1rem]" />
-            <ScrollArea className="flex h-[calc(100vh-203px)] w-full justify-center">
-              <div className="flex h-[calc(100vh-203px)] w-full justify-center">
+            <ScrollArea className="flex h-[calc(100vh-138.8px)] w-full justify-center">
+              <div className="flex h-[calc(100vh-138.8px)] w-full justify-center">
                 <div className="px-4 py-6">
                   <div className="flex items-center justify-center gap-4">
                     <div className="relative">
