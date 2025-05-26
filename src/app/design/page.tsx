@@ -47,10 +47,10 @@ export default function DesignPage() {
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />
           <main className="flex h-[calc(100vh-138.8px)] w-full flex-col justify-between">
-            <SidebarTrigger className="m-[1rem]" />
+            <SidebarTrigger className="fixed z-20" />
             <ScrollArea className="flex h-[calc(100vh-138.8px)] w-full justify-center">
               <div className="flex h-[calc(100vh-138.8px)] w-full justify-center">
-                <div className="px-4 py-6">
+                <div className="px-4 pt-[2rem]">
                   <div className="flex items-center justify-center gap-4">
                     <div className="relative">
                       <Input
@@ -101,7 +101,7 @@ export default function DesignPage() {
                       </Button>
                     </div>
                   </div>
-                  <ul className="mt-[2rem] grid w-[1200px] grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem]">
+                  <ul className="grid w-[1200px] grid-cols-4 justify-items-center gap-x-[1rem] gap-y-[2rem]">
                     {songs.map((song) => (
                       <li
                         key={song.id}
