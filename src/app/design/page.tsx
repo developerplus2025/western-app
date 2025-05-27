@@ -48,8 +48,8 @@ export default function DesignPage() {
                           unoptimized
                           src={song.album.cover_small}
                           alt={song.title}
-                          width={250}
-                          height={250}
+                          width={80}
+                          height={80}
                         />
                         <div className="flex flex-col">
                           <p className="text-xs font-medium">{song.title}</p>
