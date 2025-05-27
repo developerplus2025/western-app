@@ -96,7 +96,7 @@ export default function PlayerBar() {
       <audio
         id="audio"
         ref={audioRef}
-        src="/FICTION REMIX HOT Tiktok 2022 bản nhạc đang được #thinhhanh  2x Jin tiktok china - LAN HƯƠNG.mp3"
+        src="/fiction-remix.mp3"
         loop
         autoPlay
         onTimeUpdate={handleTimeUpdate}
