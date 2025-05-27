@@ -41,15 +41,15 @@ export default function DesignPage() {
                     {songs.map((song) => (
                       <li
                         key={song.id}
-                        className="flex h-full w-[500px] justify-between gap-2 rounded-lg px-2 py-2"
+                        className="flex h-full w-[214px] items-center justify-between gap-2 rounded-lg px-2 py-2"
                       >
                         <Image
                           className="rounded-xl"
                           unoptimized
                           src={song.album.cover_small}
                           alt={song.title}
-                          width={80}
-                          height={80}
+                          width={56}
+                          height={56}
                         />
                         <div className="flex flex-col">
                           <p className="text-xs font-medium">{song.title}</p>
