@@ -1,5 +1,6 @@
 "use client";
 import * as Slider from "@radix-ui/react-slider";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -102,7 +103,14 @@ export default function PlayerBar() {
         className="hidden"
       ></audio>
       <div className="flex items-center gap-3">
-        <div className="h-[50px] w-[50px] rounded-lg border"></div>
+        <div className="rounded-md">
+          <Image
+            src={"/56x56-000000-80-0-0.jpg"}
+            alt="gpt"
+            height={56}
+            width={56}
+          ></Image>
+        </div>
         <div className="flex flex-col">
           <p className="text-xs">
             REACT (feat. Ella Henderson) (Sam Feldt Remix)
@@ -189,7 +197,7 @@ export default function PlayerBar() {
           </svg>
         </div>
         <div className="flex w-[25rem] items-center gap-[1rem]">
-          <p className="text-xs">0:00</p>
+          <p className="text-xs tabular-nums">{formatTime(currentTime)}</p>
           <Slider.Root
             onValueChange={(newTempValue) => setTempValue(newTempValue)}
             onValueCommit={(newValue) => setValue(tempValue)}
@@ -260,6 +268,7 @@ export default function PlayerBar() {
           <path d="M134.08,154.79a8,8,0,0,0-12.15,0l-48,56A8,8,0,0,0,80,224h96a8,8,0,0,0,6.07-13.21ZM97.39,208,128,172.29,158.61,208ZM232,64V176a24,24,0,0,1-24,24h-8a8,8,0,0,1,0-16h8a8,8,0,0,0,8-8V64a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8V176a8,8,0,0,0,8,8h8a8,8,0,0,1,0,16H48a24,24,0,0,1-24-24V64A24,24,0,0,1,48,40H208A24,24,0,0,1,232,64Z"></path>
         </svg>
         <svg
+          onClick={() => decreaseVolume()}
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -288,6 +297,7 @@ export default function PlayerBar() {
           <Slider.Thumb className="block h-3 w-3 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
         </Slider.Root>
         <svg
+          onClick={() => increaseVolume()}
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
