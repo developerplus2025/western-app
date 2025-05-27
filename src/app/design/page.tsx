@@ -93,7 +93,7 @@ export default function DesignPage() {
                     {songs.map((song) => (
                       <li
                         key={song.id}
-                        className="flex h-full w-[214px] items-center gap-[2rem] rounded-lg px-2 py-2"
+                        className="flex h-full w-[220px] items-center gap-[1rem] rounded-lg px-2 py-2"
                       >
                         <Image
                           className="rounded-md"
