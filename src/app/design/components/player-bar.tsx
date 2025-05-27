@@ -92,7 +92,7 @@ export default function PlayerBar() {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
   return (
-    <div className="z-20 flex h-[80px] w-full items-center justify-between border-t bg-black px-[2rem]">
+    <div className="z-20 flex h-[80px] w-full select-none items-center justify-between border-t bg-black px-[2rem]">
       <audio
         id="audio"
         ref={audioRef}
