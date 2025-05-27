@@ -89,7 +89,7 @@ export default function DesignPage() {
             <ScrollArea className="flex h-[calc(100vh-138.8px)] w-full justify-center">
               <div className="flex h-[calc(100vh-138.8px)] w-full justify-center">
                 <div className="px-4 pt-[2rem]">
-                  <ul className="grid w-[1355px] grid-cols-5 justify-items-center gap-x-[1rem] gap-y-[2rem]">
+                  <ul className="grid w-[1355px] grid-cols-5 justify-items-center gap-x-[1rem] divide-y-1">
                     {songs.map((song) => (
                       <li
                         key={song.id}
@@ -110,6 +110,7 @@ export default function DesignPage() {
                           </p>
                         </div>
                         <svg
+                          className="flex-shrink-0"
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
                           height="16"
