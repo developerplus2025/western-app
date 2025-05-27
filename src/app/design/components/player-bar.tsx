@@ -1,0 +1,302 @@
+"use client";
+import * as Slider from "@radix-ui/react-slider";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useRef, useState } from "react";
+
+export default function PlayerBar() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState<number>(0);
+  const [currentTimeMusic, setCurrentTimeMusic] = useState<string>("3:31");
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const pathname = usePathname();
+  const [value, setValue] = useState<number[]>([0]);
+  const [totalSeconds, setTotalSeconds] = useState<number>(211);
+  const [soundValue, setSoundValue] = useState<number[]>([100]);
+  const [soundTempValue, setSoundTempValue] = useState<number[]>([50]);
+  const [tempValue, setTempValue] = useState<number[]>([0]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const updateTime = () => setCurrentTime(audio.currentTime);
+    audio.addEventListener("timeupdate", updateTime);
+
+    return () => audio.removeEventListener("timeupdate", updateTime);
+  }, []);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      setIsPlaying(false);
+      audioRef.current.pause();
+    }
+  }, [pathname]);
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = (Number(value) / 100) * totalSeconds;
+    }
+  }, [value, totalSeconds]);
+  useEffect(() => {
+    setSoundTempValue(soundValue);
+    if (audioRef.current) {
+      audioRef.current.volume = Number(soundTempValue) / 100;
+    }
+  }, [soundTempValue, soundValue]);
+  const increaseVolume = () => {
+    if (audioRef.current && audioRef.current.volume <= 1) {
+      audioRef.current.volume = Math.min(1, Number(soundValue) / 100 + 0.1); // Tăng âm lượng 0.1 mỗi lần
+      console.log(`Current volume: ${Number(soundValue) / 100}`);
+      const sound = audioRef.current.volume * 100; // Lấy giá trị âm lượng hiện tại
+      setSoundValue([sound]);
+    }
+  };
+
+  const decreaseVolume = () => {
+    if (audioRef.current && audioRef.current.volume >= 0) {
+      audioRef.current.volume = Math.max(0, Number(soundValue) / 100 - 0.1); // Giảm âm lượng 0.1 mỗi lần
+      console.log(`Current volume: ${Number(soundValue) / 100}`);
+      const sound = audioRef.current.volume * 100; // Lấy giá trị âm lượng hiện tại
+      setSoundValue([sound]);
+    }
+  };
+
+  const handlemousedown = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+  };
+  const handlemouseup = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime);
+    }
+  };
+  const handlePlayPause = () => {
+    if (audioRef.current) {
+      if (audioRef.current.paused) {
+        audioRef.current.play();
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  };
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60); // Tính phút
+    const seconds = Math.floor(time % 60); // Tính giây còn lại
+    // Định dạng với 2 chữ số (ví dụ: 01:05)
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  };
+  return (
+    <div className="z-20 flex h-[80px] w-full items-center justify-between border-t bg-black px-[2rem]">
+      <audio
+        id="audio"
+        ref={audioRef}
+        src="/kw04scrx7h.mp3"
+        loop
+        autoPlay
+        onTimeUpdate={handleTimeUpdate}
+        className="hidden"
+      ></audio>
+      <div className="flex items-center gap-3">
+        <div className="h-[50px] w-[50px] rounded-lg border"></div>
+        <div className="flex flex-col">
+          <p className="text-xs">
+            REACT (feat. Ella Henderson) (Sam Feldt Remix)
+          </p>
+          <p className="text-xs text-[#a1a1a1]">by lan Walker</p>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"></path>
+          </svg>
+        </div>
+      </div>
+      <div className="flex flex-col items-center gap-4">
+        <div className="flex items-center gap-[2rem]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path d="M237.66,178.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L212.69,192H200.94a72.12,72.12,0,0,1-58.59-30.15l-41.72-58.4A56.1,56.1,0,0,0,55.06,80H32a8,8,0,0,1,0-16H55.06a72.12,72.12,0,0,1,58.59,30.15l41.72,58.4A56.1,56.1,0,0,0,200.94,176h11.75l-10.35-10.34a8,8,0,0,1,11.32-11.32ZM143,107a8,8,0,0,0,11.16-1.86l1.2-1.67A56.1,56.1,0,0,1,200.94,80h11.75L202.34,90.34a8,8,0,0,0,11.32,11.32l24-24a8,8,0,0,0,0-11.32l-24-24a8,8,0,0,0-11.32,11.32L212.69,64H200.94a72.12,72.12,0,0,0-58.59,30.15l-1.2,1.67A8,8,0,0,0,143,107Zm-30,42a8,8,0,0,0-11.16,1.86l-1.2,1.67A56.1,56.1,0,0,1,55.06,176H32a8,8,0,0,0,0,16H55.06a72.12,72.12,0,0,0,58.59-30.15l1.2-1.67A8,8,0,0,0,113,149Z"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path d="M199.81,34a16,16,0,0,0-16.24.43L64,109.23V40a8,8,0,0,0-16,0V216a8,8,0,0,0,16,0V146.77l119.57,74.78A15.95,15.95,0,0,0,208,208.12V47.88A15.86,15.86,0,0,0,199.81,34ZM192,208,64.16,128,192,48.07Z"></path>
+          </svg>
+          <svg
+            className={`${isPlaying ? "hidden" : "flex"} border-none bg-transparent`}
+            onClick={() => {
+              setIsPlaying(!isPlaying);
+              handlePlayPause();
+            }}
+            xmlns="http://www.w3.org/2000/svg"
+            width={16}
+            height={16}
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z" />
+          </svg>
+          <svg
+            className={`${!isPlaying ? "hidden" : "flex"} border-none bg-transparent`}
+            onClick={() => {
+              setIsPlaying(!isPlaying);
+              handlePlayPause();
+            }}
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path d="M200,32H160a16,16,0,0,0-16,16V208a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm0,176H160V48h40ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Zm0,176H56V48H96Z"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path d="M200,32a8,8,0,0,0-8,8v69.23L72.43,34.45A15.95,15.95,0,0,0,48,47.88V208.12a16,16,0,0,0,24.43,13.43L192,146.77V216a8,8,0,0,0,16,0V40A8,8,0,0,0,200,32ZM64,207.93V48.05l127.84,80Z"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path d="M24,128A72.08,72.08,0,0,1,96,56H204.69L194.34,45.66a8,8,0,0,1,11.32-11.32l24,24a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L204.69,72H96a56.06,56.06,0,0,0-56,56,8,8,0,0,1-16,0Zm200-8a8,8,0,0,0-8,8,56.06,56.06,0,0,1-56,56H51.31l10.35-10.34a8,8,0,0,0-11.32-11.32l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L51.31,200H160a72.08,72.08,0,0,0,72-72A8,8,0,0,0,224,120Z"></path>
+          </svg>
+        </div>
+        <div className="flex w-[25rem] items-center gap-[1rem]">
+          <p className="text-xs">0:00</p>
+          <Slider.Root
+            onValueChange={(newTempValue) => setTempValue(newTempValue)}
+            onValueCommit={(newValue) => setValue(tempValue)}
+            defaultValue={[0]}
+            value={[(currentTime / totalSeconds) * 100]}
+            max={100}
+            step={1}
+            className="relative flex w-full touch-none select-none items-center"
+          >
+            <Slider.Track
+              onMouseDown={handlemousedown}
+              onMouseUp={handlemouseup}
+              className="relative h-1 w-full grow overflow-hidden rounded-full bg-primary/20"
+            >
+              {" "}
+              <Slider.Range className="absolute h-full bg-primary" />
+            </Slider.Track>
+            <Slider.Thumb className="block h-3 w-3 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
+          </Slider.Root>
+          <p className="text-xs tabular-nums">{currentTimeMusic}</p>
+        </div>
+      </div>
+      <div className="sh flex w-[20rem] items-center gap-4 [&_svg]:shrink-0">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#ffffff"
+          viewBox="0 0 256 256"
+        >
+          <path d="M224,72H208V64a24,24,0,0,0-24-24H40A24,24,0,0,0,16,64v96a24,24,0,0,0,24,24H152v8a24,24,0,0,0,24,24h48a24,24,0,0,0,24-24V96A24,24,0,0,0,224,72ZM40,168a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H184a8,8,0,0,1,8,8v8H176a24,24,0,0,0-24,24v72Zm192,24a8,8,0,0,1-8,8H176a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Zm-96,16a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h40A8,8,0,0,1,136,208Zm80-96a8,8,0,0,1-8,8H192a8,8,0,0,1,0-16h16A8,8,0,0,1,216,112Z"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#ffffff"
+          viewBox="0 0 256 256"
+        >
+          <path d="M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64Zm104,56H40a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Zm112-24a8,8,0,0,1-3.76,6.78l-64,40A8,8,0,0,1,168,200V120a8,8,0,0,1,12.24-6.78l64,40A8,8,0,0,1,248,160Zm-23.09,0L184,134.43v51.14Z"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#ffffff"
+          viewBox="0 0 256 256"
+        >
+          <path d="M168,16A72.07,72.07,0,0,0,96,88a73.29,73.29,0,0,0,.63,9.42L27.12,192.22A15.93,15.93,0,0,0,28.71,213L43,227.29a15.93,15.93,0,0,0,20.78,1.59l94.81-69.53A73.29,73.29,0,0,0,168,160a72,72,0,1,0,0-144Zm56,72a55.72,55.72,0,0,1-11.16,33.52L134.49,43.16A56,56,0,0,1,224,88ZM54.32,216,40,201.68,102.14,117A72.37,72.37,0,0,0,139,153.86ZM112,88a55.67,55.67,0,0,1,11.16-33.51l78.34,78.34A56,56,0,0,1,112,88Zm-2.35,58.34a8,8,0,0,1,0,11.31l-8,8a8,8,0,1,1-11.31-11.31l8-8A8,8,0,0,1,109.67,146.33Z"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#ffffff"
+          viewBox="0 0 256 256"
+        >
+          <path d="M216,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V64A16,16,0,0,0,216,48ZM40,64H216v56H136a8,8,0,0,0-8,8v64H40ZM216,192H144V136h72v56Z"></path>
+        </svg>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#ffffff"
+          viewBox="0 0 256 256"
+        >
+          <path d="M134.08,154.79a8,8,0,0,0-12.15,0l-48,56A8,8,0,0,0,80,224h96a8,8,0,0,0,6.07-13.21ZM97.39,208,128,172.29,158.61,208ZM232,64V176a24,24,0,0,1-24,24h-8a8,8,0,0,1,0-16h8a8,8,0,0,0,8-8V64a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8V176a8,8,0,0,0,8,8h8a8,8,0,0,1,0,16H48a24,24,0,0,1-24-24V64A24,24,0,0,1,48,40H208A24,24,0,0,1,232,64Z"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#ffffff"
+          viewBox="0 0 256 256"
+        >
+          <path d="M155.51,24.81a8,8,0,0,0-8.42.88L77.25,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H77.25l69.84,54.31A8,8,0,0,0,160,224V32A8,8,0,0,0,155.51,24.81ZM32,96H72v64H32ZM144,207.64,88,164.09V91.91l56-43.55ZM208,128a39.93,39.93,0,0,1-10,26.46,8,8,0,0,1-12-10.58,24,24,0,0,0,0-31.72,8,8,0,1,1,12-10.58A40,40,0,0,1,208,128Z"></path>
+        </svg>
+
+        <Slider.Root
+          onValueChange={(newSoundValue) => {
+            setSoundValue(newSoundValue);
+          }}
+          value={[Number(soundValue)]}
+          max={100}
+          step={1}
+          className="relative flex w-[6rem] touch-none select-none items-center"
+        >
+          <Slider.Track
+            onMouseDown={handlemousedown}
+            onMouseUp={handlemouseup}
+            className="relative h-1 w-full grow overflow-hidden rounded-full bg-primary/20"
+          >
+            <Slider.Range className="absolute h-full bg-primary" />
+          </Slider.Track>
+          <Slider.Thumb className="block h-3 w-3 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
+        </Slider.Root>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#ffffff"
+          viewBox="0 0 256 256"
+        >
+          <path d="M155.51,24.81a8,8,0,0,0-8.42.88L77.25,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H77.25l69.84,54.31A8,8,0,0,0,160,224V32A8,8,0,0,0,155.51,24.81ZM32,96H72v64H32ZM144,207.64,88,164.09V91.91l56-43.55Zm54-106.08a40,40,0,0,1,0,52.88,8,8,0,0,1-12-10.58,24,24,0,0,0,0-31.72,8,8,0,0,1,12-10.58ZM248,128a79.9,79.9,0,0,1-20.37,53.34,8,8,0,0,1-11.92-10.67,64,64,0,0,0,0-85.33,8,8,0,1,1,11.92-10.67A79.83,79.83,0,0,1,248,128Z"></path>
+        </svg>
+      </div>
+    </div>
+  );
+}

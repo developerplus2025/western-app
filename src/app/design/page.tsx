@@ -19,7 +19,7 @@ import {
   SpeakerHighIcon,
   SpeakerLowIcon,
 } from "@phosphor-icons/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
@@ -27,6 +27,58 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useSearch } from "./content/SearchContext";
 export default function DesignPage() {
   const { songs, loading } = useSearch();
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const setAudioData = () => {
+      setDuration(audio.duration);
+      setCurrentTime(audio.currentTime);
+    };
+
+    const setAudioTime = () => setCurrentTime(audio.currentTime);
+
+    // Add event listeners
+    audio.addEventListener("loadeddata", setAudioData);
+    audio.addEventListener("timeupdate", setAudioTime);
+
+    // Remove event listeners on cleanup
+    return () => {
+      audio.removeEventListener("loadeddata", setAudioData);
+      audio.removeEventListener("timeupdate", setAudioTime);
+    };
+  }, []);
+
+  const togglePlayPause = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const onSliderChange = (value: number[]) => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.currentTime = value[0];
+    setCurrentTime(value[0]);
+  };
+
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+  };
   return (
     <div className="flex h-[calc(100vh-138.8px)] w-full flex-col justify-between">
       <div>
