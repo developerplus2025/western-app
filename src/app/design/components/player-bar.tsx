@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 export default function PlayerBar() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState<number>(0);
-  const [currentTimeMusic, setCurrentTimeMusic] = useState<string>("3:31");
+  const [currentTimeMusic, setCurrentTimeMusic] = useState<string>("4:07");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const pathname = usePathname();
   const [value, setValue] = useState<number[]>([0]);
