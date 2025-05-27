@@ -46,7 +46,7 @@ export default function DesignPage() {
                         <Image
                           className="rounded-xl"
                           unoptimized
-                          src={song.album.cover_medium}
+                          src={song.album.cover_small}
                           alt={song.title}
                           width={250}
                           height={250}
