@@ -12,7 +12,7 @@ type SearchContextType = {
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
 
 export function SearchProvider({ children }: { children: React.ReactNode }) {
-  const [keyword, setKeyword] = useState("lossgpt");
+  const [keyword, setKeyword] = useState("the s");
   const [songs, setSongs] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 

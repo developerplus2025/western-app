@@ -93,21 +93,23 @@ export default function DesignPage() {
                     {songs.map((song) => (
                       <li
                         key={song.id}
-                        className="flex h-full w-[220px] items-center gap-[1rem] rounded-lg px-2 py-2"
+                        className="flex h-full w-[220px] items-center justify-between gap-[1rem] rounded-lg px-2 py-2"
                       >
-                        <Image
-                          className="rounded-md"
-                          unoptimized
-                          src={song.album.cover_small}
-                          alt={song.title}
-                          width={56}
-                          height={56}
-                        />
-                        <div className="flex flex-col">
-                          <p className="text-xs font-medium">{song.title}</p>
-                          <p className="text-xs font-medium text-[#a1a1a1]">
-                            by {song.artist.name}
-                          </p>
+                        <div className="flex items-center gap-[1rem]">
+                          <Image
+                            className="rounded-md"
+                            unoptimized
+                            src={song.album.cover_small}
+                            alt={song.title}
+                            width={56}
+                            height={56}
+                          />
+                          <div className="flex flex-col">
+                            <p className="text-xs font-medium">{song.title}</p>
+                            <p className="text-xs font-medium text-[#a1a1a1]">
+                              by {song.artist.name}
+                            </p>
+                          </div>
                         </div>
                         <svg
                           className="flex-shrink-0"
