@@ -210,7 +210,7 @@ export default function PlayerBar() {
             <Slider.Track
               onMouseDown={handlemousedown}
               onMouseUp={handlemouseup}
-              className="relative hidden h-1 w-full grow overflow-hidden rounded-full bg-primary/20 hover:block"
+              className="relative h-1 w-full grow overflow-hidden rounded-full bg-primary/20"
             >
               {" "}
               <Slider.Range className="absolute h-full bg-primary" />
