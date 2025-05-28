@@ -215,7 +215,7 @@ export default function PlayerBar() {
               {" "}
               <Slider.Range className="absolute h-full bg-primary" />
             </Slider.Track>
-            <Slider.Thumb className="h-3 w-3 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
+            <Slider.Thumb className="block h-3 w-3 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
           </Slider.Root>
           <p className="text-xs tabular-nums">{currentTimeMusic}</p>
         </div>
