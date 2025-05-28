@@ -89,6 +89,11 @@ export default function DesignPage() {
             <ScrollArea className="flex h-[calc(100vh-138.8px)] w-full justify-center">
               <div className="flex h-[calc(100vh-138.8px)] w-full justify-center">
                 <div className="px-4 pt-[2rem]">
+                  <div className="flex items-center gap-4 pb-[2rem]">
+                    <Button variant={"outline"}>All</Button>
+                    <Button variant={"outline"}>Music</Button>
+                    <Button variant={"outline"}>Podcasts</Button>
+                  </div>
                   <ul className="grid w-[1355px] grid-cols-5 justify-items-center gap-x-[1rem] divide-y-1">
                     {songs.map((song) => (
                       <li
