@@ -113,7 +113,7 @@ export default function DesignPage() {
                     {songs.map((song) => (
                       <li
                         key={song.id}
-                        className="flex h-full w-[220px] items-center justify-between gap-[1rem] rounded-lg px-2 py-2"
+                        className="flex h-full w-[220px] items-center justify-between gap-[1rem] rounded-lg px-2 py-2 [&_Svg]:flex-shrink-0"
                       >
                         <div className="flex items-center gap-[1rem]">
                           <Image
