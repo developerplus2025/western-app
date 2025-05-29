@@ -90,9 +90,24 @@ export default function DesignPage() {
               <div className="flex h-[calc(100vh-138.8px)] w-full justify-center">
                 <div className="px-4 pt-[2rem]">
                   <div className="flex items-center gap-4 pb-[2rem]">
-                    <Button variant={"outline"}>All</Button>
-                    <Button variant={"outline"}>Music</Button>
-                    <Button variant={"outline"}>Podcasts</Button>
+                    <Button
+                      variant={"outline"}
+                      className="h-[27px] rounded-full text-[12px]"
+                    >
+                      All
+                    </Button>
+                    <Button
+                      variant={"outline"}
+                      className="h-[27px] rounded-full text-[12px]"
+                    >
+                      Music
+                    </Button>
+                    <Button
+                      variant={"outline"}
+                      className="h-[27px] rounded-full text-[12px]"
+                    >
+                      Podcasts
+                    </Button>
                   </div>
                   <ul className="grid w-[1355px] grid-cols-5 justify-items-center gap-x-[1rem] divide-y-1">
                     {songs.map((song) => (
@@ -117,14 +132,13 @@ export default function DesignPage() {
                           </div>
                         </div>
                         <svg
-                          className="flex-shrink-0"
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
                           height="16"
-                          fill="#f0f0f0"
+                          fill="#ffffff"
                           viewBox="0 0 256 256"
                         >
-                          <path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"></path>
+                          <path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"></path>
                         </svg>
                       </li>
                     ))}

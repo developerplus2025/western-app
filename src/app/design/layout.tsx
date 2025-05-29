@@ -28,7 +28,10 @@ export default function DesignLayout({
           </div>
           <div className="flex items-center gap-[2rem]">
             <div>
-              <Button className="h-[28px] rounded-full text-[12px]">
+              <Button
+                variant={"outline"}
+                className="h-[27px] rounded-full text-[12px]"
+              >
                 Explore Premium
               </Button>
             </div>
