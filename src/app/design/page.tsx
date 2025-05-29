@@ -109,7 +109,7 @@ export default function DesignPage() {
                       Podcasts
                     </Button>
                   </div>
-                  <ul className="grid w-[1355px] grid-cols-5 justify-items-center gap-x-[1rem] divide-y-1">
+                  <ul className="grid w-[1355px] grid-cols-5 gap-x-[1rem] divide-y-1">
                     {songs.map((song) => (
                       <li
                         key={song.id}
