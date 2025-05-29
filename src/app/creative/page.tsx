@@ -35,15 +35,7 @@ export default function SupportPage() {
 
   return (
     <section className="">
-      <div className="px-[23rem] py-[4rem]">
-        <div className="my-[3rem] flex flex-col gap-[1rem]">
-          <div className="text-center text-3xl font-bold">
-            Idea To Audio In Second
-          </div>
-          <div className="text-md text-center font-medium">
-            Transform Your Ideas into Audio with Superhuman Speed
-          </div>
-        </div>
+      <div className="mb-[3rem] mt-[3rem] px-[23rem]">
         <div className="relative">
           {" "}
           <Textarea className="h-[8rem] resize-none px-[1rem] py-[2.3rem]" />
