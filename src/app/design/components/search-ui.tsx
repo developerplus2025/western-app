@@ -27,6 +27,7 @@ export default function SearchUi() {
             className="w-[25rem] rounded-full pl-[42px]"
           />
           <svg
+            className="absolute left-[26px] top-1/2 -translate-x-1/2 -translate-y-1/2"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
