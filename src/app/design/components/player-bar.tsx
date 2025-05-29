@@ -221,7 +221,7 @@ export default function PlayerBar() {
           <p className="text-xs tabular-nums">{currentTimeMusic}</p>
         </div>
       </div>
-      <div className="sh flex w-[20rem] items-center gap-4 [&_svg]:shrink-0">
+      <div className="sh flex w-[22rem] items-center gap-4 [&_svg]:shrink-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
