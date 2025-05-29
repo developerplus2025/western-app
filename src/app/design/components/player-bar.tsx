@@ -117,7 +117,7 @@ export default function PlayerBar() {
           </p>
           <p className="text-xs text-[#a1a1a1]">by lan Walker</p>
         </div>
-        <div className="flex gap-2 [&_svg]:flex-shrink-0">
+        <div className="flex gap-2 [&_svg]:flex-shrink-0 [&_svg]:cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -139,7 +139,7 @@ export default function PlayerBar() {
         </div>
       </div>
       <div className="flex flex-col items-center gap-4">
-        <div className="flex items-center gap-[2rem]">
+        <div className="flex items-center gap-[2rem] [&_svg]:cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -215,7 +215,7 @@ export default function PlayerBar() {
             value={[(currentTime / totalSeconds) * 100]}
             max={100}
             step={1}
-            className="relative flex w-full touch-none select-none items-center"
+            className="relative flex w-full touch-none select-none items-center [&_svg]:cursor-pointer"
           >
             <Slider.Track
               onMouseDown={handlemousedown}
@@ -230,7 +230,7 @@ export default function PlayerBar() {
           <p className="text-xs tabular-nums">{currentTimeMusic}</p>
         </div>
       </div>
-      <div className="sh flex w-[22rem] items-center gap-4 [&_svg]:shrink-0">
+      <div className="sh flex w-[22rem] items-center gap-4 [&_svg]:shrink-0 [&_svg]:cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
