@@ -801,7 +801,7 @@ export const Navigation = (): JSX.Element => {
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   <AlertDialog>
-                    <AlertDialogTrigger asChild>
+                    <AlertDialogTrigger className="w-[400px]" asChild>
                       <Button
                         variant={"outline"}
                         className="h-fit gap-1 px-3 py-1 [&_svg]:size-[15px]"
