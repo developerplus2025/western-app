@@ -914,7 +914,7 @@ export const Navigation = (): JSX.Element => {
                           </Button>
                         </AlertDialogDescription>
                       </AlertDialogHeader>
-                      <AlertDialogFooter>
+                      <AlertDialogFooter className="hidden">
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
                         <AlertDialogAction>Continue</AlertDialogAction>
                       </AlertDialogFooter>
