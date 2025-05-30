@@ -33,7 +33,7 @@ export const ThemeToggle = ({
           const newThemeMatchesSystem = newTheme === systemTheme;
           setTheme(newThemeMatchesSystem ? "system" : newTheme);
         }}
-        className="radix-themes-custom-fonts flex h-[30px] w-[37px] cursor-pointer items-center justify-center rounded-md border bg-black transition-all duration-200 ease-out hover:bg-muted dark:hover:bg-[#101010]"
+        className="radix-themes-custom-fonts flex h-[30px] w-[37px] cursor-pointer items-center justify-center rounded-md border bg-white transition-all duration-200 ease-out hover:bg-muted dark:bg-black dark:hover:bg-[#101010]"
         content="Toggle theme"
       >
         <IconButton
