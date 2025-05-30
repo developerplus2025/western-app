@@ -235,7 +235,7 @@ export const Navigation = (): JSX.Element => {
             <div className="flex items-center gap-4">
               <Link
                 href="/"
-                className="font-[BespokeStencil-BoldItalic] text-[1.1rem] font-bold transition-colors duration-300 ease-out dark:text-white"
+                className="font-[BespokeStencil-Bold] text-[1.1rem] font-bold transition-colors duration-300 ease-out dark:text-white"
               >
                 WESTERN
               </Link>
@@ -794,37 +794,49 @@ export const Navigation = (): JSX.Element => {
                   </Button>
                 </motion.div>
               </Link>
-              <Link href="/ai">
+              <div>
                 <motion.div
                   initial={{ opacity: 0 }} // Trạng thái ban đầu: mờ và di chuyển xuống
                   animate={{ opacity: 1 }} // Trạng thái sau khi hoàn thành: rõ và về vị trí ban đầu
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                  <Button
-                    variant={"outline"}
-                    className="h-fit gap-1 px-3 py-1 [&_svg]:size-[0.8rem]"
-                  >
-                    Create Account
-                    <svg
-                      data-testid="geist-icon"
-                      height={16}
-                      strokeLinejoin="round"
-                      viewBox="0 0 16 16"
-                      width={16}
-                      style={{ color: "currentcolor" }}
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8C14.5 11.5899 11.5899 14.5 8 14.5ZM0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8ZM7.53033 11.2803L10.1106 8.70004C10.4972 8.31342 10.4972 7.68658 10.1106 7.29996L7.53033 4.71967L7 4.18934L5.93934 5.25L6.46967 5.78033L8.68934 8L6.46967 10.2197L5.93934 10.75L7 11.8107L7.53033 11.2803Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    {/* <Sparkles />
-                    Ask Ai */}
-                  </Button>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button
+                        variant={"outline"}
+                        className="h-fit gap-1 px-3 py-1 [&_svg]:size-[15px]"
+                      >
+                        Create Account
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="#ffffff"
+                          viewBox="0 0 256 256"
+                        >
+                          <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm29.66-93.66a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32L140.69,128,106.34,93.66a8,8,0,0,1,11.32-11.32Z"></path>
+                        </svg>
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle className="text-center">
+                          Login
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                          This action cannot be undone. This will permanently
+                          delete your account and remove your data from our
+                          servers.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogAction>Continue</AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
                 </motion.div>
-              </Link>
+              </div>
             </div>
           </div>
           <div className="absolute left-0 top-0 z-[3] rounded-full bg-slate-100 transition-[width] dark:bg-[#000000]" />

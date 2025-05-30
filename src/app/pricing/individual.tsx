@@ -971,25 +971,16 @@ export default function Individual() {
                       key={feature.name}
                       className="flex items-center gap-2 px-2"
                     >
-                      <div className="rounded-md">
-                        {/* {feature.icon} */}
+                      <div className="">
                         <svg
-                          data-testid="geist-icon"
-                          height={16}
-                          strokeLinejoin="round"
-                          viewBox="0 0 16 16"
-                          width={16}
-                          style={{ color: "currentcolor" }}
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="#ffffff"
+                          viewBox="0 0 256 256"
                         >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M5.50001 1.93933L6.03034 2.46966L10.8536 7.29288C11.2441 7.68341 11.2441 8.31657 10.8536 8.7071L6.03034 13.5303L5.50001 14.0607L4.43935 13L4.96968 12.4697L9.43935 7.99999L4.96968 3.53032L4.43935 2.99999L5.50001 1.93933Z"
-                            fill="currentColor"
-                          />
+                          <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
                         </svg>
-
-                        {/* <CheckIcon className="h-[15px] w-[15px] flex-shrink-0 text-[#ffffff]" /> */}
                       </div>
                       <p className="text-[0.85rem] text-[white]">
                         {feature.name}
