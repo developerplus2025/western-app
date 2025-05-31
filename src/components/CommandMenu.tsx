@@ -317,6 +317,7 @@ export function CommandMenu() {
           <CommandGroup heading="Link">
             {docsTitle.map((items_cm) => (
               <CommandItem
+                className="[&_svg]:mr-2 [&_svg]:flex-shrink-0"
                 key={items_cm.id}
                 onSelect={() => {
                   router.push(`${items_cm.src}`);
@@ -325,7 +326,7 @@ export function CommandMenu() {
               >
                 {items_cm.icon}
 
-                <span>{items_cm.name}</span>
+                <span className="text-sm">{items_cm.name}</span>
                 <CommandShortcut>{items_cm.shortcut}</CommandShortcut>
               </CommandItem>
             ))}
