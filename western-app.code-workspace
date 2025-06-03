@@ -15,5 +15,6 @@
   "settings": {
     "svg.preview.background": "white",
     "githubPullRequests.ignoredPullRequestBranches": ["main"],
+    "liveServer.settings.multiRootWorkspaceName": "western-app",
   },
 }
