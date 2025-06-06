@@ -953,7 +953,7 @@ number-flow-react::part(suffix) {
   font-style: italic;
 }
 
-.vercel [cmdk-root] {
+.dark .vercel [cmdk-root] {
   max-width: 640px;
   width: 100%;
   padding: 8px;
@@ -968,6 +968,17 @@ number-flow-react::part(suffix) {
 }
 
 .vercel [cmdk-root] {
+  max-width: 640px;
+  width: 100%;
+  padding: 8px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  border: 1px solid var(--gray6);
+  box-shadow: var(--cmdk-shadow);
+  transition: transform 0.1s ease;
+  outline: none;
   background: hsla(0, 0%, 9%, 0.7);
 }
 
