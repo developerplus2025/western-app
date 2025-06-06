@@ -60,6 +60,7 @@ export function CMDK() {
   return (
     <div className="vercel">
       <Command.Dialog
+        className="vercel"
         open={open}
         onOpenChange={setOpen}
         ref={ref}
