@@ -46,7 +46,7 @@ export function CMDK() {
 
   function bounce() {
     if (ref.current) {
-      ref.current.style.transform = "scale(0.96)";
+      ref.current.style.transform = "scale(0)";
       setTimeout(() => {
         if (ref.current) {
           ref.current.style.transform = "";
