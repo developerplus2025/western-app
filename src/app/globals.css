@@ -952,158 +952,163 @@ number-flow-react::part(suffix) {
   font-display: swap;
   font-style: italic;
 }
-.vercel {
-  [cmdk-root] {
-    max-width: 640px;
-    width: 100%;
-    padding: 8px;
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    font-family: var(--font-sans);
-    border: 1px solid var(--gray6);
-    box-shadow: var(--cmdk-shadow);
-    transition: transform 100ms ease;
-    outline: none;
 
-    .dark & {
-      background: rgba(22, 22, 22, 0.7);
-    }
-  }
+.vercel [cmdk-root] {
+  max-width: 640px;
+  width: 100%;
+  padding: 8px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  border: 1px solid var(--gray6);
+  box-shadow: var(--cmdk-shadow);
+  transition: transform 0.1s ease;
+  outline: none;
+}
 
-  [cmdk-input] {
-    font-family: var(--font-sans);
-    border: none;
-    width: 100%;
-    font-size: 17px;
-    padding: 8px 8px 16px 8px;
-    outline: none;
-    background: var(--bg);
-    color: var(--gray12);
-    border-bottom: 1px solid var(--gray6);
-    margin-bottom: 16px;
-    border-radius: 0;
+.vercel [cmdk-root] {
+  background: hsla(0, 0%, 9%, 0.7);
+}
 
-    &::placeholder {
-      color: var(--gray9);
-    }
-  }
+.vercel [cmdk-input] {
+  font-family: var(--font-sans);
+  border: none;
+  width: 100%;
+  font-size: 17px;
+  padding: 8px 8px 16px;
+  outline: none;
+  background: var(--bg);
+  color: var(--gray12);
+  border-bottom: 1px solid var(--gray6);
+  margin-bottom: 16px;
+  border-radius: 0;
+}
 
-  [cmdk-vercel-badge] {
-    height: 20px;
-    background: var(--grayA3);
-    display: inline-flex;
-    align-items: center;
-    padding: 0 8px;
-    font-size: 12px;
-    color: var(--grayA11);
-    border-radius: 4px;
-    margin: 4px 0 4px 4px;
-    user-select: none;
-    text-transform: capitalize;
-    font-weight: 500;
-  }
+.vercel [cmdk-input]::placeholder {
+  color: var(--gray9);
+}
 
-  [cmdk-item] {
-    content-visibility: auto;
+.vercel [cmdk-vercel-badge] {
+  height: 20px;
+  background: var(--grayA3);
+  display: inline-flex;
+  padding: 0 8px;
+  font-size: 12px;
+  color: var(--grayA11);
+  border-radius: 4px;
+  margin: 4px 0 4px 4px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
 
-    cursor: pointer;
-    height: 48px;
-    border-radius: 8px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 16px;
-    color: var(--gray11);
-    user-select: none;
-    will-change: background, color;
-    transition: all 150ms ease;
-    transition-property: none;
+.vercel [cmdk-item],
+.vercel [cmdk-vercel-badge] {
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
-    &[data-selected="true"] {
-      background: var(--grayA3);
-      color: var(--gray12);
-    }
+.vercel [cmdk-item] {
+  content-visibility: auto;
+  cursor: pointer;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  padding: 0 16px;
+  color: var(--gray11);
+  will-change: background, color;
+  transition: all 0.15s ease;
+  transition-property: none;
+}
 
-    &[data-disabled="true"] {
-      color: var(--gray8);
-      cursor: not-allowed;
-    }
+.vercel [cmdk-item][data-selected="true"] {
+  background: var(--grayA3);
+  color: var(--gray12);
+}
 
-    &:active {
-      transition-property: background;
-      background: var(--gray4);
-    }
+.vercel [cmdk-item][data-disabled="true"] {
+  color: var(--gray8);
+  cursor: not-allowed;
+}
 
-    & + [cmdk-item] {
-      margin-top: 4px;
-    }
+.vercel [cmdk-item]:active {
+  transition-property: background;
+  background: var(--gray4);
+}
 
-    svg {
-      width: 18px;
-      height: 18px;
-    }
-  }
+.vercel [cmdk-item] + [cmdk-item] {
+  margin-top: 4px;
+}
 
-  [cmdk-list] {
-    height: min(330px, calc(var(--cmdk-list-height)));
-    max-height: 400px;
-    overflow: auto;
-    overscroll-behavior: contain;
-    transition: 100ms ease;
-    transition-property: height;
-  }
+.vercel [cmdk-item] svg {
+  width: 18px;
+  height: 18px;
+}
 
-  [cmdk-vercel-shortcuts] {
-    display: flex;
-    margin-left: auto;
-    gap: 8px;
+.vercel [cmdk-list] {
+  height: min(330px, var(--cmdk-list-height));
+  max-height: 400px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  transition: 0.1s ease;
+  transition-property: height;
+}
 
-    kbd {
-      font-family: var(--font-sans);
-      font-size: 12px;
-      min-width: 20px;
-      padding: 4px;
-      height: 20px;
-      border-radius: 4px;
-      color: var(--gray11);
-      background: var(--gray4);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-transform: uppercase;
-    }
-  }
+.vercel [cmdk-vercel-shortcuts] {
+  display: flex;
+  margin-left: auto;
+  gap: 8px;
+}
 
-  [cmdk-separator] {
-    height: 1px;
-    width: 100%;
-    background: var(--gray5);
-    margin: 4px 0;
-  }
+.vercel [cmdk-vercel-shortcuts] kbd {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  min-width: 20px;
+  padding: 4px;
+  height: 20px;
+  border-radius: 4px;
+  color: var(--gray11);
+  background: var(--gray4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
 
-  *:not([hidden]) + [cmdk-group] {
-    margin-top: 8px;
-  }
+.vercel [cmdk-separator] {
+  height: 1px;
+  width: 100%;
+  background: var(--gray5);
+  margin: 4px 0;
+}
 
-  [cmdk-group-heading] {
-    user-select: none;
-    font-size: 12px;
-    color: var(--gray11);
-    padding: 0 8px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-  }
+.vercel :not([hidden]) + [cmdk-group] {
+  margin-top: 8px;
+}
 
-  [cmdk-empty] {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    white-space: pre-wrap;
-    color: var(--gray11);
-  }
+.vercel [cmdk-group-heading] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-size: 12px;
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
+
+.vercel [cmdk-empty],
+.vercel [cmdk-group-heading] {
+  color: var(--gray11);
+  display: flex;
+  align-items: center;
+}
+
+.vercel [cmdk-empty] {
+  font-size: 14px;
+  justify-content: center;
+  height: 48px;
+  white-space: pre-wrap;
 }
