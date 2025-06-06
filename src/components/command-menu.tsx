@@ -60,7 +60,7 @@ export function CMDK() {
   return (
     <div className="vercel fixed inset-0 bg-black/30 p-1 backdrop-blur-sm">
       <Command.Dialog
-        className="vercel fixed left-1/2 top-1/2 z-50 w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-xl border bg-black"
+        className="vercel fixed left-1/2 top-1/2 z-50 w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-xl border bg-black p-2"
         open={open}
         onOpenChange={setOpen}
         ref={ref}
