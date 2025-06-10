@@ -347,10 +347,10 @@ export default function Home() {
             The next generation of audio collaboration.
           </TextScramble> */}
           <h1 className="text-md w-[522px] text-center">
-            Dive into a seamless music experience with our cutting-edge
+            Dive into a seamless music experience with our cutting edge
             software. Collaborate effortlessly, unleash your creativity, manage
-            playlists, and craft professional-quality tracks — all in one
-            powerful platform.
+            playlists and craft professional quality tracks all in one powerful
+            platform.
           </h1>
         </div>
         <div className="flex gap-[2rem]">
