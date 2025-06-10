@@ -13,10 +13,7 @@ export const RadixDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          className="bg-[#131313] ring-1 ring-[#c6c6c680] ring-offset-2 ring-offset-black"
-          variant="outline"
-        >
+        <Button variant={"default"} className="">
           <svg
             className="mr-2 h-4 w-4"
             data-testid="geist-icon"
