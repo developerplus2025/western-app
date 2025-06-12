@@ -347,7 +347,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <div
-                        className={`hover:text-white ${
+                        className={`transition-colors duration-300 ease-out dark:hover:text-white ${
                           pathname === "/library"
                             ? "dark:text-white"
                             : "dark:text-[#9b9b9b]"
