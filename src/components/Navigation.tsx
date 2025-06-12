@@ -138,6 +138,7 @@ import { cn } from "@/lib/utils";
 import PopoverNotifications from "./popover-notifications";
 import TextHoverEnter from "./TextHoverEnter";
 import FeedBack from "./feedback";
+import { Text } from "./ui/text";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Alert Dialog",
@@ -346,7 +347,8 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <TextHoverEnter
+                      <Text
+                        variant="glitch"
                         className={`${
                           pathname === "/library"
                             ? "dark:text-white"
@@ -354,7 +356,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Library
-                      </TextHoverEnter>
+                      </Text>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
