@@ -136,7 +136,6 @@ import Linkedin from "./Linkedin";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 import PopoverNotifications from "./popover-notifications";
-import TextHoverEnter from "./TextHoverEnter";
 import FeedBack from "./feedback";
 import { Text } from "./ui/text";
 const components: { title: string; href: string; description: string }[] = [
@@ -430,7 +429,8 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <TextHoverEnter
+                      <Text
+                        variant="glitch"
                         className={`${
                           pathname === "/creative"
                             ? "dark:text-white"
@@ -438,7 +438,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Creative
-                      </TextHoverEnter>
+                      </Text>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -452,7 +452,8 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <TextHoverEnter
+                      <Text
+                        variant="glitch"
                         className={`${
                           pathname === "/pricing"
                             ? "dark:text-white"
@@ -460,7 +461,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Pricing
-                      </TextHoverEnter>
+                      </Text>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -473,7 +474,8 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <TextHoverEnter
+                      <Text
+                        variant="glitch"
                         className={`${
                           pathname === "/blog"
                             ? "dark:text-white"
@@ -481,7 +483,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Blog
-                      </TextHoverEnter>
+                      </Text>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -494,7 +496,8 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <TextHoverEnter
+                      <Text
+                        variant="glitch"
                         className={`${
                           pathname === "/design"
                             ? "dark:text-white"
@@ -502,7 +505,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Design
-                      </TextHoverEnter>
+                      </Text>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -598,7 +601,8 @@ export const Navigation = (): JSX.Element => {
                           : ""
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <TextHoverEnter
+                      <Text
+                        variant="glitch"
                         className={`${
                           pathname === "/generation"
                             ? "dark:text-white"
@@ -606,7 +610,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Generation
-                      </TextHoverEnter>
+                      </Text>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
