@@ -347,7 +347,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <Text
-                        variant="glitch"
+                        variant="hover-enter"
                         className={`${
                           pathname === "/library"
                             ? "dark:text-white"
@@ -430,7 +430,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <Text
-                        variant="glitch"
+                        variant="hover-enter"
                         className={`${
                           pathname === "/creative"
                             ? "dark:text-white"
@@ -453,7 +453,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <Text
-                        variant="glitch"
+                        variant="hover-enter"
                         className={`${
                           pathname === "/pricing"
                             ? "dark:text-white"
@@ -475,7 +475,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <Text
-                        variant="glitch"
+                        variant="hover-enter"
                         className={`${
                           pathname === "/blog"
                             ? "dark:text-white"
@@ -497,7 +497,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <Text
-                        variant="glitch"
+                        variant="hover-enter"
                         className={`${
                           pathname === "/design"
                             ? "dark:text-white"
@@ -602,7 +602,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <Text
-                        variant="glitch"
+                        variant="hover-enter"
                         className={`${
                           pathname === "/generation"
                             ? "dark:text-white"
