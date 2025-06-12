@@ -346,8 +346,7 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <Text
-                        variant="hover-enter"
+                      <div
                         className={`${
                           pathname === "/library"
                             ? "dark:text-white"
@@ -355,7 +354,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Library
-                      </Text>
+                      </div>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -429,8 +428,7 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <Text
-                        variant="hover-enter"
+                      <div
                         className={`${
                           pathname === "/creative"
                             ? "dark:text-white"
@@ -438,7 +436,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Creative
-                      </Text>
+                      </div>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -452,8 +450,7 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <Text
-                        variant="hover-enter"
+                      <div
                         className={`${
                           pathname === "/pricing"
                             ? "dark:text-white"
@@ -461,7 +458,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Pricing
-                      </Text>
+                      </div>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -474,8 +471,7 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <Text
-                        variant="hover-enter"
+                      <div
                         className={`${
                           pathname === "/blog"
                             ? "dark:text-white"
@@ -483,7 +479,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Blog
-                      </Text>
+                      </div>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -496,8 +492,7 @@ export const Navigation = (): JSX.Element => {
                           : "dark:text-[#9b9b9b]"
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <Text
-                        variant="hover-enter"
+                      <div
                         className={`${
                           pathname === "/design"
                             ? "dark:text-white"
@@ -505,7 +500,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Design
-                      </Text>
+                      </div>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -601,8 +596,7 @@ export const Navigation = (): JSX.Element => {
                           : ""
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
-                      <Text
-                        variant="hover-enter"
+                      <div
                         className={`${
                           pathname === "/generation"
                             ? "dark:text-white"
@@ -610,7 +604,7 @@ export const Navigation = (): JSX.Element => {
                         }`}
                       >
                         Generation
-                      </Text>
+                      </div>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
