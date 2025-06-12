@@ -429,7 +429,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <div
-                        className={`${
+                        className={`transition-colors duration-300 ease-out dark:hover:text-white${
                           pathname === "/creative"
                             ? "dark:text-white"
                             : "dark:text-[#9b9b9b]"
@@ -451,7 +451,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <div
-                        className={`${
+                        className={`transition-colors duration-300 ease-out dark:hover:text-white${
                           pathname === "/pricing"
                             ? "dark:text-white"
                             : "dark:text-[#9b9b9b]"
@@ -472,7 +472,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <div
-                        className={`${
+                        className={`transition-colors duration-300 ease-out dark:hover:text-white${
                           pathname === "/blog"
                             ? "dark:text-white"
                             : "dark:text-[#9b9b9b]"
@@ -493,7 +493,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <div
-                        className={`${
+                        className={`transition-colors duration-300 ease-out dark:hover:text-white${
                           pathname === "/design"
                             ? "dark:text-white"
                             : "dark:text-[#9b9b9b]"
@@ -597,7 +597,7 @@ export const Navigation = (): JSX.Element => {
                       } cursor-pointer select-none transition-colors dark:hover:text-white`}
                     >
                       <div
-                        className={`${
+                        className={`transition-colors duration-300 ease-out dark:hover:text-white${
                           pathname === "/generation"
                             ? "dark:text-white"
                             : "dark:text-[#9b9b9b]"
