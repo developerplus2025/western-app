@@ -302,7 +302,7 @@ export default function Home() {
           >
             The next generation of audio collaboration.
           </TextEffect> */}
-          <h1 className="animation-h1 w-[990px] text-center text-[5rem] font-semibold leading-[5rem] -tracking-[3px]">
+          <h1 className="animation-h1 w-[990px] text-center font-mono text-[5rem] font-semibold italic leading-[5rem] -tracking-[3px]">
             The next generation of audio collaboration.
           </h1>
           {/* <div className="flex flex-col items-center justify-center">

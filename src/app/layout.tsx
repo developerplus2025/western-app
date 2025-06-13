@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 // import 'fumadsocs-ui/dist/style.css';
 import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
@@ -37,7 +38,7 @@ export default function RootLayout({
       <html
         suppressHydrationWarning
         lang="en"
-        className={`${GeistSans.className} custom_command_scroll dark`}
+        className={`${GeistSans.className} ${GeistMono.className} custom_command_scroll dark`}
         style={{ colorScheme: "dark" }}
       >
         <head />
