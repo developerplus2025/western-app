@@ -38,7 +38,7 @@ export default function RootLayout({
       <html
         suppressHydrationWarning
         lang="en"
-        className={`${GeistSans.className} ${GeistMono.className} custom_command_scroll dark`}
+        className={`${GeistSans.className} custom_command_scroll dark`}
         style={{ colorScheme: "dark" }}
       >
         <head />

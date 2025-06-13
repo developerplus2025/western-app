@@ -142,7 +142,6 @@ import { ChartBar } from "./components/chart";
 import { ChartFirstYear } from "./components/chart-first-year";
 import { ChartLastYear } from "./components/chart-last-yeart";
 import { InfiniteSlider } from "../home-2/components/core/infinite-slider";
-
 import { motion } from "framer-motion";
 import SmoothScroll from "@/components/SmoothScroll";
 import AccordionFAQ from "./components/faq";
@@ -302,7 +301,9 @@ export default function Home() {
           >
             The next generation of audio collaboration.
           </TextEffect> */}
-          <h1 className="animation-h1 w-[990px] text-center font-mono text-[5rem] font-semibold italic leading-[5rem] -tracking-[3px]">
+          <h1
+            className={`animation-h1 w-[990px] text-center font-mono text-[5rem] font-semibold italic leading-[5rem] -tracking-[3px] ${GeistMono.className}`}
+          >
             The next generation of audio collaboration.
           </h1>
           {/* <div className="flex flex-col items-center justify-center">
