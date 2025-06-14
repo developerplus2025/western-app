@@ -303,7 +303,7 @@ export default function Home() {
           </TextEffect> */}
           <h1
             style={{
-              wordSpacing: "4.5rem",
+              wordSpacing: "-30px",
             }}
             className={`animation-h1 w-[990px] text-center font-mono text-[5rem] font-semibold leading-[5.2rem] -tracking-[3px] ${GeistMono.className}`}
           >
