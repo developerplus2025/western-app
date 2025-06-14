@@ -302,7 +302,10 @@ export default function Home() {
             The next generation of audio collaboration.
           </TextEffect> */}
           <h1
-            className={`animation-h1 w-[990px] text-center font-mono text-[5rem] font-semibold italic leading-[5rem] -tracking-[3px] ${GeistMono.className}`}
+            style={{
+              wordSpacing: "4.5rem",
+            }}
+            className={`animation-h1 w-[990px] text-center font-mono text-[5rem] font-semibold leading-[5.2rem] -tracking-[3px] ${GeistMono.className}`}
           >
             The next generation of audio collaboration.
           </h1>
