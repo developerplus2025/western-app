@@ -423,7 +423,7 @@ export default function Home() {
       <PeopleSay />
       <div className="mx-auto my-[4rem] h-px w-[700px] bg-gradient-to-r from-transparent via-zinc-700 to-transparent dark:via-zinc-300"></div>
       <div className="text-center">
-        <p className="font-[BespokeStencil-BoldItalic] text-[55px]">WESTERN</p>
+        <p className="font-[BespokeStencil-BoldItalic] text-[55px]">Decent</p>
       </div>
 
       {/* <Loader variant={"classic"} size={"sm"} />
@@ -444,22 +444,22 @@ export default function Home() {
             <div className="flex gap-[2rem] rounded-t-lg border-b dark:border-b-[#202020] dark:bg-black">
               <Menubar className="rounded-t-lg border-none dark:bg-black">
                 <MenubarMenu>
-                  <MenubarTrigger>WESTERN</MenubarTrigger>
+                  <MenubarTrigger>Decent</MenubarTrigger>
                   <MenubarContent>
-                    <MenubarItem>About WESTERN</MenubarItem>
+                    <MenubarItem>About Decent</MenubarItem>
                     <MenubarSeparator />
                     <MenubarItem>
                       Preferences<MenubarShortcut>⌘,</MenubarShortcut>
                     </MenubarItem>
                     <MenubarSeparator />
                     <MenubarItem>
-                      Hide WESTERN<MenubarShortcut>⇧⌘H</MenubarShortcut>
+                      Hide Decent<MenubarShortcut>⇧⌘H</MenubarShortcut>
                     </MenubarItem>
                     <MenubarItem>
                       Hide Other<MenubarShortcut>⌘H</MenubarShortcut>
                     </MenubarItem>
                     <MenubarItem>
-                      Quit WESTERN <MenubarShortcut>⌘Q</MenubarShortcut>
+                      Quit Decent <MenubarShortcut>⌘Q</MenubarShortcut>
                     </MenubarItem>
                   </MenubarContent>
                 </MenubarMenu>

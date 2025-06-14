@@ -418,22 +418,22 @@ export default function Home() {
             <div className="flex gap-[2rem] rounded-t-lg border-b dark:border-b-[#202020] dark:bg-black">
               <Menubar className="rounded-t-lg border-none dark:bg-black">
                 <MenubarMenu>
-                  <MenubarTrigger>WESTERN</MenubarTrigger>
+                  <MenubarTrigger>Decent</MenubarTrigger>
                   <MenubarContent>
-                    <MenubarItem>About WESTERN</MenubarItem>
+                    <MenubarItem>About Decent</MenubarItem>
                     <MenubarSeparator />
                     <MenubarItem>
                       Preferences<MenubarShortcut>⌘,</MenubarShortcut>
                     </MenubarItem>
                     <MenubarSeparator />
                     <MenubarItem>
-                      Hide WESTERN<MenubarShortcut>⇧⌘H</MenubarShortcut>
+                      Hide Decent<MenubarShortcut>⇧⌘H</MenubarShortcut>
                     </MenubarItem>
                     <MenubarItem>
                       Hide Other<MenubarShortcut>⌘H</MenubarShortcut>
                     </MenubarItem>
                     <MenubarItem>
-                      Quit WESTERN <MenubarShortcut>⌘Q</MenubarShortcut>
+                      Quit Decent <MenubarShortcut>⌘Q</MenubarShortcut>
                     </MenubarItem>
                   </MenubarContent>
                 </MenubarMenu>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Community | WESTERN",
-  description: "WESTERN - Community",
+  title: "Community | Decent",
+  description: "Decent - Community",
 };
 export default function CommunityLayout({
   children,

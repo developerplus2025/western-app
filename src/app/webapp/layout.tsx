@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "WESTERN WebApp",
-  description: "WESTERN WebApp",
+  title: "Decent WebApp",
+  description: "Decent WebApp",
 };
-export default function WESTERNWebAppLayout({
+export default function DecentWebAppLayout({
   children,
 }: {
   children: React.ReactNode;

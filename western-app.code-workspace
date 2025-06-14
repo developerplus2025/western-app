@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "western-app",
+      "name": "Decent-app",
       "path": ".",
     },
     {
@@ -9,12 +9,12 @@
       "path": "../../Downloads/manimations",
     },
     {
-      "path": "../../Templates/western-app-next-js-15",
+      "path": "../../Templates/Decent-app-next-js-15",
     },
   ],
   "settings": {
     "svg.preview.background": "white",
     "githubPullRequests.ignoredPullRequestBranches": ["main"],
-    "liveServer.settings.multiRootWorkspaceName": "western-app",
+    "liveServer.settings.multiRootWorkspaceName": "Decent-app",
   },
 }

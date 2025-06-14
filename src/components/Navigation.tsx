@@ -237,7 +237,7 @@ export const Navigation = (): JSX.Element => {
                 href="/"
                 className="font-[BespokeStencil-Bold] text-[1.1rem] font-bold transition-colors duration-300 ease-out dark:text-white"
               >
-                WESTERN
+                Decent
               </Link>
               {/* <Link
                 href="/"

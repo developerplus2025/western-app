@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Audio | Western",
-  description: "Western - Audio",
+  title: "Audio | Decent",
+  description: "Decent - Audio",
 };
 export default function AudioLayout({
   children,

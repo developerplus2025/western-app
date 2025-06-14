@@ -174,7 +174,7 @@ const songs: Song[] = [
       "An uplifting journey through warm synths and nostalgic guitar riffs.",
   },
 ];
-export default function WESTERNWebApp() {
+export default function DecentWebApp() {
   const { theme, systemTheme, setTheme } = useTheme();
   const [position, setPosition] = React.useState("benoit");
   return (
@@ -185,22 +185,22 @@ export default function WESTERNWebApp() {
             <div className="title_bar flex h-[37px] gap-[2rem] rounded-t-lg border-b dark:border-b-[#202020] dark:bg-black">
               <Menubar className="title_bar_no rounded-t-lg border-none px-[1rem] dark:bg-black">
                 <MenubarMenu>
-                  {/* <MenubarTrigger>WESTERN</MenubarTrigger> */}
+                  {/* <MenubarTrigger>Decent</MenubarTrigger> */}
                   <MenubarContent>
-                    <MenubarItem>About WESTERN</MenubarItem>
+                    <MenubarItem>About Decent</MenubarItem>
                     <MenubarSeparator />
                     <MenubarItem>
                       Preferences<MenubarShortcut>⌘,</MenubarShortcut>
                     </MenubarItem>
                     <MenubarSeparator />
                     <MenubarItem>
-                      Hide WESTERN<MenubarShortcut>⇧⌘H</MenubarShortcut>
+                      Hide Decent<MenubarShortcut>⇧⌘H</MenubarShortcut>
                     </MenubarItem>
                     <MenubarItem>
                       Hide Other<MenubarShortcut>⌘H</MenubarShortcut>
                     </MenubarItem>
                     <MenubarItem>
-                      Quit WESTERN <MenubarShortcut>⌘Q</MenubarShortcut>
+                      Quit Decent <MenubarShortcut>⌘Q</MenubarShortcut>
                     </MenubarItem>
                   </MenubarContent>
                 </MenubarMenu>

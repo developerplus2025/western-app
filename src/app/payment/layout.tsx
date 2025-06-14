@@ -1,8 +1,8 @@
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Payment | WESTERN",
-  description: "WESTERN",
+  title: "Payment | Decent",
+  description: "Decent",
 };
 export default function PayMentLayout({
   children,

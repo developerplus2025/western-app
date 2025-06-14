@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Generation | WESTERN",
-  description: "WESTERN - Generation",
+  title: "Generation | Decent",
+  description: "Decent - Generation",
 };
 export default function ResourcesLayout({
   children,

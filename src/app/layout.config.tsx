@@ -10,7 +10,7 @@ import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 export const baseOptions: BaseLayoutProps = {
   nav: {
     // can be JSX too!
-    title: "WESTERN Version 10.9.5",
+    title: "Decent Version 10.9.5",
   },
   links: [
     {

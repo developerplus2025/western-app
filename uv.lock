@@ -742,7 +742,7 @@ wheels = [
 ]
 
 [[package]]
-name = "western-app"
+name = "Decent-app"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

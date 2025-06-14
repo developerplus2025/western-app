@@ -5,8 +5,8 @@ import { SearchProvider } from "./content/SearchContext";
 import { Button } from "@/components/ui/button";
 import PlayerBar from "./components/player-bar";
 export const metadata: Metadata = {
-  title: "Design | Western",
-  description: "Western - Design",
+  title: "Design | Decent",
+  description: "Decent - Design",
 };
 
 export default function DesignLayout({
@@ -20,7 +20,7 @@ export default function DesignLayout({
         <div className="z-20 flex h-[58.8px] items-center justify-between border-b bg-black px-[2rem]">
           <div>
             <p className="font-[BespokeStencil-Bold] text-[1.1rem] font-bold transition-colors duration-300 ease-out dark:text-white">
-              WESTERN
+              Decent
             </p>
           </div>
           <div className="flex items-center gap-[1rem] [&_svg]:h-[20px] [&_svg]:w-[20px]">

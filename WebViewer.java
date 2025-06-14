@@ -7,11 +7,11 @@ public class WebViewer extends Application {
     @Override
     public void start(Stage stage) {
         WebView browser = new WebView();
-        browser.getEngine().load("https://western-app.vercel.app/");
+        browser.getEngine().load("https://Decent-app.vercel.app/");
 
         Scene scene = new Scene(browser, 1000, 600);
         stage.setScene(scene);
-        stage.setTitle("Western App Viewer");
+        stage.setTitle("Decent App Viewer");
         stage.show();
     }
 

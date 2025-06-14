@@ -1,12 +1,12 @@
 {
-  "name": "western-vf",
+  "name": "Decent-vf",
   "version": "10.9.5",
   "private": true,
   "main": "main.js",
   "build": {
     "asar": false,
     "compression": "store",
-    "appId": "com.WESTERN.inc",
+    "appId": "com.Decent.inc",
     "directories": {
       "output": "dist"
     },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Home V2 | WESTERN",
-  description: "WESTERN - Pricing",
+  title: "Home V2 | Decent",
+  description: "Decent - Pricing",
 };
 export default function PricingLayout({
   children,

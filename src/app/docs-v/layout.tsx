@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Documention | WESTERN",
+  title: "Documention | Decent",
   description: "MusicHub App",
 };
 export default function DocumentionLayout({
