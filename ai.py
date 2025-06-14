@@ -1,50 +1,74 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
+from chatterbot.trainers import ListTrainer
+import wikipedia
 import logging
+import time
+import sys
 
-# Bật log để xem quá trình
+# Bật log nếu muốn debug
 logging.basicConfig(level=logging.INFO)
 
-# Tạo chatbot
+# Đặt ngôn ngữ Wikipedia sang tiếng Việt
+wikipedia.set_lang("vi")
+
+# Hàm hiệu ứng gõ từng ký tự
+
+
+def typing_effect(text, delay=0.02):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()  # Xuống dòng
+
+
+# Tạo ChatBot có trí nhớ
 bot = ChatBot(
-    'Terminal',
+    'SmartBot',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     logic_adapters=[
-        'chatterbot.logic.BestMatch',
-        'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot.logic.MathematicalEvaluation'
+        'chatterbot.logic.BestMatch'
     ],
-    database_uri='sqlite:///database.sqlite3'
+    database_uri='sqlite:///db.sqlite3'
 )
 
-# Huấn luyện với dữ liệu tiếng Anh có sẵn
-corpus_trainer = ChatterBotCorpusTrainer(bot)
-corpus_trainer.train(
-    'chatterbot.corpus.english',
-    'chatterbot.corpus.english.greetings',
-    'chatterbot.corpus.english.conversations'
-)
-
-# Huấn luyện dữ liệu tiếng Việt tùy chỉnh
-custom_trainer = ListTrainer(bot)
-custom_trainer.train([
-    "Xin chào",
-    "Chào bạn! Tôi có thể giúp gì?",
+# Huấn luyện cơ bản (nếu chưa có)
+trainer = ListTrainer(bot)
+trainer.train([
+    "Chào bạn",
+    "Chào bạn, tôi là SmartBot!",
     "Bạn tên là gì?",
-    "Tôi là trợ lý ảo của bạn.",
-    "Tạm biệt",
-    "Chào tạm biệt, hẹn gặp lại!"
+    "Tôi là một trợ lý ảo thông minh.",
+    "Bạn có khỏe không?",
+    "Tôi hoạt động ổn định, cảm ơn bạn."
 ])
 
-# Giao diện chat dòng lệnh
-print("Nhập tin nhắn để bắt đầu (bấm Ctrl+C để thoát):")
+# Giao tiếp
+print("SmartBot đã sẵn sàng. Hãy hỏi tôi bất cứ điều gì!")
 
 while True:
     try:
         user_input = input("Bạn: ")
-        bot_response = bot.get_response(user_input)
-        print("Bot:", bot_response)
 
-    except (KeyboardInterrupt, EOFError, SystemExit):
-        print("\nĐã thoát.")
+        # Trả lời từ ChatBot
+        response = bot.get_response(user_input)
+
+        # Nếu độ tin cậy thấp → tìm Wikipedia
+        if float(response.confidence) < 0.4:
+            try:
+                page = wikipedia.page(user_input)
+                summary = page.summary
+                typing_effect("Bot (Wikipedia): " + summary)
+            except wikipedia.exceptions.DisambiguationError as e:
+                typing_effect("Bot: Chủ đề không rõ ràng. Bạn có thể chọn:")
+                for option in e.options[:5]:
+                    typing_effect(" - " + option)
+            except wikipedia.exceptions.PageError:
+                typing_effect(
+                    "Bot: Xin lỗi, tôi không tìm thấy thông tin phù hợp.")
+        else:
+            typing_effect("Bot: " + str(response))
+
+    except (KeyboardInterrupt, EOFError):
+        typing_effect("\nKết thúc trò chuyện. Tạm biệt!")
         break
