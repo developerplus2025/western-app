@@ -168,6 +168,7 @@ import { animate, stagger } from "motion";
 import { splitText } from "motion-plus";
 import PowerBy from "./components/power-by";
 import SplitText from "@/components/ SplitText";
+import AnimateTextHome from "./components/text-animation";
 export default function Home() {
   const text = `
 
@@ -278,14 +279,15 @@ export default function Home() {
           >
             The next generation of audio collaboration.
           </TextEffect> */}
-          <SplitText
+          <AnimateTextHome />
+          {/* <SplitText
             text=" The next generation of audio collaboration."
             // style={{
             //   wordSpacing: "-30px",
             // }}
 
             className={`animation-h1 w-[900px] text-center font-mono text-[5rem] font-semibold leading-[5.2rem] -tracking-[3px]`}
-          ></SplitText>
+          ></SplitText> */}
           {/* <div className="flex flex-col items-center justify-center">
             <div
               ref={containerRef}
