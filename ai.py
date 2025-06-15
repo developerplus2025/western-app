@@ -2,25 +2,12 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import wikipedia
 import logging
-import time
-import sys
 
-# Bật log nếu muốn debug
+# Bật log nếu muốn xem chi tiết
 logging.basicConfig(level=logging.INFO)
 
 # Đặt ngôn ngữ Wikipedia sang tiếng Việt
 wikipedia.set_lang("vi")
-
-# Hàm hiệu ứng gõ từng ký tự
-
-
-def typing_effect(text, delay=0.02):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(delay)
-    print()  # Xuống dòng
-
 
 # Tạo ChatBot có trí nhớ
 bot = ChatBot(
@@ -32,7 +19,7 @@ bot = ChatBot(
     database_uri='sqlite:///db.sqlite3'
 )
 
-# Huấn luyện cơ bản (nếu chưa có)
+# Huấn luyện cơ bản một vài câu (tuỳ chọn)
 trainer = ListTrainer(bot)
 trainer.train([
     "Chào bạn",
@@ -50,25 +37,23 @@ while True:
     try:
         user_input = input("Bạn: ")
 
-        # Trả lời từ ChatBot
+        # Gửi vào ChatBot
         response = bot.get_response(user_input)
 
-        # Nếu độ tin cậy thấp → tìm Wikipedia
+        # Nếu độ tin cậy thấp → chuyển sang Wikipedia
         if float(response.confidence) < 0.4:
             try:
                 page = wikipedia.page(user_input)
                 summary = page.summary
-                typing_effect("Bot (Wikipedia): " + summary)
+                print("Bot (Wikipedia):", summary)
             except wikipedia.exceptions.DisambiguationError as e:
-                typing_effect("Bot: Chủ đề không rõ ràng. Bạn có thể chọn:")
-                for option in e.options[:5]:
-                    typing_effect(" - " + option)
+                print("Bot: Chủ đề không rõ ràng. Bạn có thể chọn:")
+                print(" - " + "\n - ".join(e.options[:5]))
             except wikipedia.exceptions.PageError:
-                typing_effect(
-                    "Bot: Xin lỗi, tôi không tìm thấy thông tin phù hợp.")
+                print("Bot: Xin lỗi, tôi không tìm thấy thông tin phù hợp.")
         else:
-            typing_effect("Bot: " + str(response))
+            print("Bot:", response)
 
     except (KeyboardInterrupt, EOFError):
-        typing_effect("\nKết thúc trò chuyện. Tạm biệt!")
+        print("\nKết thúc trò chuyện.")
         break
