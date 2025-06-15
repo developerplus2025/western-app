@@ -284,7 +284,7 @@ export default function Home() {
             //   wordSpacing: "-30px",
             // }}
 
-            className={`animation-h1 w-[990px] text-center font-mono text-[5rem] font-semibold leading-[5.2rem] -tracking-[3px]`}
+            className={`animation-h1 w-[900px] text-center font-mono text-[5rem] font-semibold leading-[5.2rem] -tracking-[3px]`}
           ></SplitText>
           {/* <div className="flex flex-col items-center justify-center">
             <div
