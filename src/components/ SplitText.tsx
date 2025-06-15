@@ -30,7 +30,7 @@ const SplitText = ({
   const letter: Variants = {
     hidden: {
       opacity: 0,
-      y: `0.5em`,
+      y: `0.1em`,
     },
     visible: {
       opacity: 1,
