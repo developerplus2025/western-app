@@ -94,7 +94,7 @@ export default function AccordionFAQ() {
           {items.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col gap-2 border-t first:border-t-0 last:border-b-0"
+              className="flex flex-col gap-2 border-t pt-4 first:border-t-0 last:border-b-0"
             >
               <h1 className="font-medium">{item.title}</h1>
               <p className="text-sm text-[#a1a1a1]">{item.content}</p>
