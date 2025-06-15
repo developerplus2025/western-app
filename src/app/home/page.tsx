@@ -235,7 +235,7 @@ export default function Home() {
       {/* <TailwindcssButton /> */}
 
       <CompAvatar />
-      <BadgeAnimatedBorder />
+      {/* <BadgeAnimatedBorder /> */}
       <motion.div
         initial={{ opacity: 0, y: 20 }} // Trạng thái ban đầu: mờ và di chuyển xuống
         animate={{ opacity: 1, y: 0 }} // Trạng thái sau khi hoàn thành: rõ và về vị trí ban đầu
