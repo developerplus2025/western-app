@@ -167,7 +167,7 @@ import { RadixDialog } from "./components/modal-animation-video";
 import { animate, stagger } from "motion";
 import { splitText } from "motion-plus";
 import PowerBy from "./components/power-by";
-import { SplitText } from "@/components/ SplitText";
+import SplitText from "@/components/ SplitText";
 export default function Home() {
   const text = `
 
