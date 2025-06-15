@@ -61,7 +61,7 @@ export default function RootLayout({
                 },
               }}
               closeButton
-              className={`"top-[60px] "`}
+              className={`"top-[60px] ${GeistSans.className} "`}
               position="top-center"
             />
             <RootProvider>{children}</RootProvider>

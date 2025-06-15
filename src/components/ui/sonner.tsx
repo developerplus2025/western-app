@@ -2,7 +2,6 @@
 
 import { useTheme } from "next-themes";
 import { Toaster as Sonner } from "sonner";
-import { GeistSans } from "geist/font/sans";
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
 const ToasterSonner = ({ ...props }: ToasterProps) => {
@@ -11,7 +10,7 @@ const ToasterSonner = ({ ...props }: ToasterProps) => {
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
-      className={`"toaster group ${GeistSans.className} "`}
+      className={`toaster group top-[60px]`}
       toastOptions={{
         classNames: {
           toast:
