@@ -1,35 +1,47 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 type SplitTextProps = {
   text: string;
   className?: string;
+  delay?: number;
+  duration?: number;
+  stagger?: number;
 };
 
-const container = {
-  hidden: { opacity: 0 },
-  visible: (i = 1) => ({
-    opacity: 1,
-    transition: { staggerChildren: 0.04, delayChildren: 0.04 * i },
-  }),
-};
-
-const child = {
-  hidden: {
-    opacity: 0,
-    y: `0.25em`,
-  },
-  visible: {
-    opacity: 1,
-    y: `0em`,
-    transition: {
-      duration: 0.4,
-      ease: [0.2, 0.65, 0.3, 0.9],
+const SplitText = ({
+  text,
+  className,
+  delay = 0.2,
+  duration = 0.5,
+  stagger = 0.05,
+}: SplitTextProps) => {
+  const container: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay,
+        staggerChildren: stagger,
+      },
     },
-  },
-};
+  };
 
-export const SplitText = ({ text, className }: SplitTextProps) => {
+  const letter: Variants = {
+    hidden: {
+      opacity: 0,
+      y: `0.5em`,
+    },
+    visible: {
+      opacity: 1,
+      y: `0em`,
+      transition: {
+        duration,
+        ease: [0.25, 0.46, 0.45, 0.94], // cubic-bezier style
+      },
+    },
+  };
+
   return (
     <motion.span
       variants={container}
@@ -38,15 +50,20 @@ export const SplitText = ({ text, className }: SplitTextProps) => {
       className={className}
       style={{ display: "inline-block", overflow: "hidden" }}
     >
-      {text.split("").map((char, index) => (
+      {text.split("").map((char, i) => (
         <motion.span
-          key={index}
-          variants={child}
-          style={{ display: "inline-block" }}
+          key={i}
+          variants={letter}
+          style={{
+            display: "inline-block",
+            whiteSpace: char === " " ? "pre" : "normal",
+          }}
         >
-          {char === " " ? "\u00A0" : char}
+          {char}
         </motion.span>
       ))}
     </motion.span>
   );
 };
+
+export default SplitText;
