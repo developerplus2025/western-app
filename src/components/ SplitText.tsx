@@ -12,8 +12,8 @@ type SplitTextProps = {
 const SplitText = ({
   text,
   className,
-  delay = 0.2,
-  duration = 0.5,
+  delay = 0.1,
+  duration = 0.25,
   stagger = 0.05,
 }: SplitTextProps) => {
   const container: Variants = {
