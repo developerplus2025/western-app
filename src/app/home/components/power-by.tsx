@@ -16,15 +16,9 @@ export default function PowerBy() {
   return (
     <div className="flex flex-col items-center gap-[2rem]">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="w-[860px] text-center text-[3.5rem] font-bold leading-[4.5rem] tracking-tighter text-white sm:text-5xl xl:text-[3.5rem]">
+        <h1 className="w-[860px] text-center text-[2.5rem] font-bold leading-[4.5rem] tracking-tighter text-white sm:text-[2.5rem] xl:text-[2.5rem]">
           Technologies Behind the Software
         </h1>
-        <span className="md:text-md max-w-[510px] text-center text-zinc-500 dark:text-zinc-400">
-          This software is built using modern web technologies that ensure high
-          performance, scalability, and a seamless user experience. From
-          front-end frameworks to back-end services, each tool has been
-          carefully selected to optimize development and functionality.
-        </span>
       </div>
 
       <div className="grid gap-4 px-[11rem] sm:grid-cols-2 lg:grid-cols-3">
@@ -114,7 +108,7 @@ const items = [
     ),
     title: "React",
     description:
-      "A popular JavaScript library for building user interfaces with a component-based architecture.",
+      "A popular JavaScript library for building user interfaces with a component-based approach. Efficient updates via a virtual DOM and a rich ecosystem make it ideal for scalable apps.",
   },
   {
     link: "https://nextjs.org/",
@@ -185,7 +179,7 @@ const items = [
     ),
     title: "Next.js",
     description:
-      "A powerful React framework that supports server-side rendering, SEO, and high performance.",
+      "A React framework that supports server-side rendering, SEO, and hybrid static/dynamic pages. Built-in routing and Vercel integration make deployment seamless.",
   },
   {
     link: "",
@@ -284,7 +278,7 @@ const items = [
     ),
     title: " Solid",
     description:
-      "A high-performance, reactive-first JavaScript library without a virtual DOM.",
+      "A high-performance UI library with fine-grained reactivity and no virtual DOM. Updates go directly to the DOM, making it extremely fast and lightweight.",
   },
   {
     link: "https://turbo.build/",
@@ -340,7 +334,7 @@ const items = [
     ),
     title: "Turbopack",
     description:
-      "A next-generation bundler from Vercel, faster than Webpack with optimized hot reload.",
+      "A next-gen bundler from Vercel, built with Rust. Faster than Webpack, with blazing-fast hot reload and first-class TypeScript support.",
   },
   {
     link: "https://linear.app/",
@@ -362,7 +356,7 @@ const items = [
     ),
     title: "Linear",
     description:
-      "A modern issue tracking and project management platform for software teams.",
+      "A modern project and issue tracker for software teams. Clean UI, lightning-fast, and integrates smoothly with GitHub, Slack, and other tools.",
   },
   {
     link: "https://remix.run/",
@@ -384,6 +378,6 @@ const items = [
     ),
     title: "Remix",
     description:
-      "A full-stack React framework focused on performance, data loading, and fast navigation.",
+      "A full-stack React framework focused on speed and performance. Server-first rendering, smart data loading, and great SEO out of the box.",
   },
 ];
