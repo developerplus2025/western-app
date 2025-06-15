@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 export default function AnimateTextHome() {
-  const headline = "Create Eye-Catching Experiences With Simple UIs!";
+  const headline = "The next generation of audio collaboration.";
   const words = headline.split(" ");
 
   const wordVariants = {
@@ -20,7 +20,7 @@ export default function AnimateTextHome() {
   };
 
   return (
-    <div className="flex flex-wrap">
+    <div className="w-[900px]">
       {words.map((word, index) => (
         <motion.p
           key={index}
