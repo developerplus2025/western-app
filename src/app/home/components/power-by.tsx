@@ -57,7 +57,7 @@ export default function PowerBy() {
 
               <div className="space-y-2 py-2">
                 <h3 className="text-base font-medium">{items.title}</h3>
-                <p className="line-clamp-2 text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   {items.description}
                 </p>
               </div>
