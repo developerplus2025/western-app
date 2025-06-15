@@ -20,7 +20,7 @@ export default function AnimateTextHome() {
   };
 
   return (
-    <div className="flex w-[900px] flex-wrap">
+    <div className="flex w-[900px] flex-wrap justify-center gap-3">
       {words.map((word, index) => (
         <motion.p
           key={index}
