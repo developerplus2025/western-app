@@ -167,6 +167,7 @@ import { RadixDialog } from "./components/modal-animation-video";
 import { animate, stagger } from "motion";
 import { splitText } from "motion-plus";
 import PowerBy from "./components/power-by";
+import { SplitText } from "@/components/ SplitText";
 export default function Home() {
   const text = `
 
@@ -220,30 +221,6 @@ export default function Home() {
   const [value, setValue] = React.useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    document.fonts.ready.then(() => {
-      if (!containerRef.current) return;
-
-      // Hide the container until the fonts are loaded
-      containerRef.current.style.visibility = "visible";
-
-      const { words } = splitText(
-        containerRef.current.querySelector("animation-h1")!,
-      );
-
-      // Animate the words in the h1
-      animate(
-        words,
-        { opacity: [0, 1], y: [10, 0] },
-        {
-          type: "spring",
-          duration: 2,
-          bounce: 0,
-          delay: stagger(0.05),
-        },
-      );
-    });
-  }, []);
   React.useEffect(() => {
     const interval = setInterval(() => {
       setValue((v) => (v >= 100 ? 0 : v + 10));
@@ -301,14 +278,14 @@ export default function Home() {
           >
             The next generation of audio collaboration.
           </TextEffect> */}
-          <h1
+          <SplitText
+            text=" The next generation of audio collaboration."
             // style={{
             //   wordSpacing: "-30px",
             // }}
+
             className={`animation-h1 w-[990px] text-center font-mono text-[5rem] font-semibold leading-[5.2rem] -tracking-[3px]`}
-          >
-            The next generation of audio collaboration.
-          </h1>
+          ></SplitText>
           {/* <div className="flex flex-col items-center justify-center">
             <div
               ref={containerRef}
