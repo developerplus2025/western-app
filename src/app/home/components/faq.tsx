@@ -90,11 +90,14 @@ export default function AccordionFAQ() {
   return (
     <div className="flex w-full justify-center px-[3rem]">
       <div className="flex w-full flex-col-reverse items-center gap-[2rem] rounded-lg">
-        <div className="w-[800px] space-y-4 divide-y-1">
+        <div className="flex w-[800px] flex-col gap-3">
           {items.map((item) => (
-            <div key={item.id}>
+            <div
+              key={item.id}
+              className="flex flex-col gap-2 border-t first:border-t-0 last:border-b-0"
+            >
               <h1 className="font-medium">{item.title}</h1>
-              <p className="text-[#a1a1a1]">{item.content}</p>
+              <p className="text-sm text-[#a1a1a1]">{item.content}</p>
             </div>
           ))}
         </div>
