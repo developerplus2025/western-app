@@ -15,6 +15,7 @@ import AccordionFAQ from "./components/faq";
 import { PeopleSay } from "./components/people-say";
 import { NavigationEffect } from "@/components/NavigationEffect";
 import Modal from "./components/Modal";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const { theme, systemTheme, setTheme } = useTheme();
@@ -70,6 +71,30 @@ export default function Home() {
         <div className="flex gap-[2rem]">
           <DownloadButton />
           <Modal isOpen={open} onClose={() => setOpen(false)} />
+          <Button
+            onClick={() => setOpen(true)}
+            variant={"default"}
+            className=""
+          >
+            <svg
+              className="mr-2 h-4 w-4"
+              data-testid="geist-icon"
+              height={16}
+              strokeLinejoin="round"
+              viewBox="0 0 16 16"
+              width={16}
+              style={{ color: "currentcolor" }}
+            >
+              <path
+                fill="#666"
+                fillRule="evenodd"
+                d="M14.5 8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6 11l5.5-3L6 5v6Z"
+                clipRule="evenodd"
+                style={{ fill: "currentColor" }}
+              />
+            </svg>
+            Wacth Demo Now
+          </Button>
         </div>
       </motion.div>
       <div className="mx-auto mb-[4rem] mt-[10rem] h-px w-full bg-[#262626]"></div>
