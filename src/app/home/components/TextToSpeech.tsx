@@ -8,7 +8,6 @@ const TextToSpeech = () => {
   const handleSpeak = () => {
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
       const utterance = new window.SpeechSynthesisUtterance(text);
-      utterance.lang = "vi-VN";
       window.speechSynthesis.speak(utterance);
     } else {
       console.warn("Speech synthesis không được hỗ trợ trên môi trường này.");
