@@ -6,11 +6,13 @@ const TextToSpeech = () => {
   const [text, setText] = useState("");
 
   const handleSpeak = () => {
-    if (!text.trim()) return;
-
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "en-US"; // hoặc 'vi-VN' nếu muốn tiếng Việt
-    window.speechSynthesis.speak(utterance);
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      const utterance = new window.SpeechSynthesisUtterance(text);
+      utterance.lang = "vi-VN";
+      window.speechSynthesis.speak(utterance);
+    } else {
+      console.warn("Speech synthesis không được hỗ trợ trên môi trường này.");
+    }
   };
 
   return (
