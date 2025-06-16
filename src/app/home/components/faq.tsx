@@ -40,49 +40,49 @@ const items = [
     id: "1",
     title: "What makes this software unique?",
     content:
-      "This software stands out with its developer-friendly, modern design built entirely using TypeScript for strong type safety and easier long-term maintenance. Unlike many alternatives, it prioritizes both user experience and code quality. Accessibility is built-in from the ground up, strictly following WCAG and WAI-ARIA standards. Rich, beginner-friendly documentation is continuously updated alongside new features, ensuring users stay informed. With a lightweight core, minimal dependencies, and modern tooling, the result is a fast, reliable, and delightful experience for developers and end users alike.",
+      "This software stands out by combining a modern, developer-first design with a deep focus on accessibility and performance. Built entirely with TypeScript, it ensures better scalability and fewer bugs. Unlike traditional music tools, it offers a clean interface, seamless user experience, and strict adherence to accessibility standards. Whether you're a hobbyist or a pro, you'll appreciate the thoughtful design and maintainable architecture.",
   },
   {
     id: "2",
     title: "How can I customize the interface?",
     content:
-      "Customization is flexible and extensive. CSS variables let you easily theme the entire app—colors, typography, spacing, and more. For detailed control, you can use `className` or inline `style` props on any component. The software integrates smoothly with popular styling approaches like Tailwind CSS and CSS Modules, so it fits naturally into almost any frontend stack. Built-in dark mode can be toggled manually or synced with system settings, and everything is designed to be override-friendly for teams with custom branding needs.",
+      "You can easily customize the appearance of the app using built-in CSS variables, allowing you to adjust colors, spacing, fonts, and more. Developers can apply custom `className`s or inline styles for granular control. The interface supports both dark and light themes, which can be toggled manually or automatically based on system preferences. Tailoring the UI to match your brand or personal style is simple and flexible.",
   },
   {
     id: "3",
     title: "Is the software optimized for performance?",
     content:
-      "Performance is a key focus throughout the entire architecture. Code-splitting and tree-shaking reduce initial bundle size, while lazy loading defers non-essential features until needed. Each component is optimized to be small (under 5KB gzipped), avoiding unnecessary re-renders via React memoization techniques. Virtualized lists are used when rendering large datasets, minimizing DOM overhead. These strategies ensure the software remains highly responsive—even when handling thousands of tracks or running on lower-end hardware.",
+      "Yes. The software uses tree-shaking, code-splitting, and lazy loading to reduce initial load time and improve runtime performance. React memoization helps avoid unnecessary re-renders, keeping everything smooth even when managing large libraries. With optimized rendering, efficient DOM updates, and a tiny footprint, it runs efficiently on both high-end and low-resource devices. You’ll get a fast and fluid experience across the board.",
   },
   {
     id: "4",
     title: "Is the software accessible?",
     content:
-      "Yes, accessibility is treated as a first-class feature. Every interactive component includes semantic ARIA roles, keyboard navigation, and focus management to support all users. We've tested the app with widely used screen readers such as NVDA (Windows), VoiceOver (macOS/iOS), and JAWS to ensure compatibility. Our design process also emphasizes color contrast, logical tab order, and motion reduction for users with sensitivity. The goal is to create a software experience that works equally well for everyone, regardless of their physical abilities or devices.",
+      "Absolutely. Every component includes proper ARIA labels, keyboard navigation, and clear focus management to meet WCAG guidelines. We've tested compatibility with major screen readers like NVDA and VoiceOver to ensure usability for everyone. The design maintains strong color contrast and respects reduced-motion settings. Accessibility isn't an afterthought—it's built into the foundation from day one.",
   },
   {
     id: "5",
     title: "What platforms are supported?",
     content:
-      "The software runs smoothly across major platforms. Native desktop apps are available for Windows and macOS, enabling offline access and full system integration. There's also a web version that works across all modern browsers including Chrome, Firefox, Safari, and Edge. The UI is fully responsive, adapting seamlessly to tablets and mobile phones. We regularly test on various devices and operating systems to ensure broad compatibility, giving you flexibility to work wherever you are.",
+      "The software is available as a cross-platform desktop app for Windows and macOS. There's also a browser-based version compatible with modern browsers like Chrome, Firefox, Safari, and Edge. It’s fully responsive, offering a smooth experience on tablets and mobile devices. Whether you’re at a desk or on the move, the app adapts to your workflow with zero compromise.",
   },
   {
     id: "6",
     title: "Is dark mode supported?",
     content:
-      "Yes, dark mode is fully supported and intelligently integrated. By default, it follows your system’s light/dark setting, but you can also switch themes manually from within the app. All interface elements are designed to maintain readability and contrast in both light and dark environments. Developers can also adjust the theme using CSS variables for fine-tuned control, allowing dark mode to blend with custom branding or visual preferences.",
+      "Yes. Dark mode is supported out of the box and can either follow your system preferences or be toggled manually from the settings. All UI components adapt automatically with balanced contrast and accessibility in mind. You can also adjust the theme with custom variables to match your own visual preferences or branding guidelines.",
   },
   {
     id: "7",
     title: "How do I import music?",
     content:
-      "Importing music is simple and flexible. You can drag and drop files directly, select folders using the file picker, or paste URLs to fetch remote content. It also connects with cloud services like Google Drive and Dropbox, letting you pull in files from your cloud storage instantly. Once imported, tracks are scanned, tagged, and added to your personal library. Features like batch metadata editing, playlist grouping, and multi-format support make organizing and managing your collection easy and intuitive.",
+      "You can import music by dragging and dropping files, choosing folders, or pasting URLs. The app also integrates with cloud platforms like Google Drive and Dropbox, allowing quick access to your music library. Once imported, files are scanned, tagged, and categorized automatically. Playlist tools and batch editing make managing your collection fast and efficient.",
   },
   {
     id: "8",
     title: "Does it require an internet connection?",
     content:
-      "No, core features are fully functional offline. Playback, file management, editing, and most user interactions do not require a connection. You can work entirely locally in a studio or on the move. However, certain features—such as cloud syncing, software updates, or access to online help—will require an internet connection. When online, the app checks for new versions and security patches automatically, keeping your system up to date with minimal effort.",
+      "No. You can use all core features like playback, editing, and file management without an internet connection. However, certain features—such as cloud sync, software updates, or remote track fetching—require online access. The app is built to work reliably offline, ensuring productivity wherever you are.",
   },
 ];
 
