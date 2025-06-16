@@ -14,6 +14,7 @@ import PowerBy from "./components/power-by";
 import AccordionFAQ from "./components/faq";
 import { PeopleSay } from "./components/people-say";
 import { NavigationEffect } from "@/components/NavigationEffect";
+import Modal from "./components/Modal";
 
 export default function Home() {
   const { theme, systemTheme, setTheme } = useTheme();
@@ -68,7 +69,7 @@ export default function Home() {
         </div>
         <div className="flex gap-[2rem]">
           <DownloadButton />
-          <RadixDialog />
+          <Modal isOpen={open} onClose={() => setOpen(false)} />
         </div>
       </motion.div>
       <div className="mx-auto mb-[4rem] mt-[10rem] h-px w-full bg-[#262626]"></div>
