@@ -406,7 +406,6 @@ export default function Home() {
       <div className="mx-auto my-[4rem] h-px w-[700px] bg-gradient-to-r from-transparent via-zinc-700 to-transparent dark:via-zinc-300"></div>
       <div className="text-center">
         <p className="font-[BespokeStencil-BoldItalic] text-[55px]">Decent</p>
-        <TextToSpeech />
       </div>
       {/* <Loader variant={"classic"} size={"sm"} />
       <AudioCard />
