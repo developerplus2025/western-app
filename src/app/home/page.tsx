@@ -170,6 +170,7 @@ import PowerBy from "./components/power-by";
 import SplitText from "@/components/ SplitText";
 import AnimateTextHome from "./components/text-animation";
 import { BadgeAnimatedBorder } from "./components/BadgeAnimatedBorder";
+import TextToSpeech from "./components/TextToSpeech";
 export default function Home() {
   const text = `
 
@@ -237,7 +238,7 @@ export default function Home() {
   return (
     <main className="GeistSans relative flex min-h-screen w-full flex-col items-center justify-between gap-[1rem] overflow-x-hidden pb-[1rem] pt-[6rem] dark:bg-black dark:[color-scheme:dark]">
       {/* <TailwindcssButton /> */}
-      <Button onClick={() => speechText()}>Decent</Button>t
+
       <CompAvatar />
       {/* <BadgeAnimatedBorder /> */}
       <motion.div
@@ -405,6 +406,7 @@ export default function Home() {
       <div className="mx-auto my-[4rem] h-px w-[700px] bg-gradient-to-r from-transparent via-zinc-700 to-transparent dark:via-zinc-300"></div>
       <div className="text-center">
         <p className="font-[BespokeStencil-BoldItalic] text-[55px]">Decent</p>
+        <TextToSpeech />
       </div>
       {/* <Loader variant={"classic"} size={"sm"} />
       <AudioCard />
