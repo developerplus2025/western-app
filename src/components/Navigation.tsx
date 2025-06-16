@@ -235,7 +235,7 @@ export const Navigation = (): JSX.Element => {
             <div className="flex items-center gap-4">
               <Link
                 href="/"
-                className="font-[BespokeStencil-Bold] text-[1.1rem] font-bold transition-colors duration-300 ease-out dark:text-white"
+                className="mask-logo-animation font-[BespokeStencil-Bold] text-[1.1rem] font-bold transition-colors duration-300 ease-out dark:text-white"
               >
                 Decent
               </Link>
