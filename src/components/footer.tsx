@@ -23,11 +23,6 @@ export default function Footer() {
       );
     toast.promise(promise, {
       loading: "Loading...",
-      success: (data) => {
-        return `Thanks for subscribing!`;
-      },
-
-      error: "Error",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +38,11 @@ export default function Footer() {
           />
         </svg>
       ),
+      success: (data) => {
+        return `Thanks for subscribing!`;
+      },
+
+      error: "Error",
     });
   };
   return (
