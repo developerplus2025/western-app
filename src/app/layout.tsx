@@ -8,7 +8,7 @@ import "./globals.css";
 // import 'fumadsocs-ui/dist/style.css';
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { Toaster, toast } from "sonner";
+// import { Toaster, toast } from "sonner";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
@@ -17,7 +17,7 @@ import { CMDK } from "@/components/command-menu";
 // import { Toaster } from "@/components/ui/sonner";
 import Providers from "@/components/ProgressBarProvider";
 import Footer from "@/components/footer";
-// import { ToasterSonner } from "../components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 import CookieAlert from "@/components/cookie-alert";
 import { RootProvider } from "fumadocs-ui/provider";
 import FrameVideo from "./home/components/frame-video";
@@ -45,13 +45,16 @@ export default function RootLayout({
           <meta name="theme-color" content="#000000" />
         </head>
 
-        <body className="theme-default relative overflow-x-hidden antialiased">
+        <body
+          style={{ colorScheme: "dark" }}
+          className="theme-default relative overflow-x-hidden antialiased"
+        >
           <Analytics />
 
           <CookieAlert />
           <ThemeProvider
             disableTransitionOnChange
-            // enableSystem
+            enableSystem
             attribute="class"
             defaultTheme="dark"
           >
@@ -78,15 +81,17 @@ export default function RootLayout({
               }}
               hotkey={["alt + C"]}
               toastOptions={{
-                unstyled: true,
+                unstyled: false,
                 classNames: {
+                  description: "__className_3a0388",
                   cancelButton: "bg-orange-400",
                   closeButton:
                     "dark:bg-black left-[325px] top-1/2 -translate-y-1/2 border border-[#404040] transition-[background] transition-colors  ease-out duration-500 bg-white hover:bg-muted dark:hover:bg-white dark:hover:text-black",
                 },
               }}
+              offset={{ top: "80px" }}
               closeButton
-              className={`top-[80px] dark:bg-black ${GeistSans.className} `}
+              className={`dark:bg-black`}
               position="top-center"
             />
             <RootProvider>{children}</RootProvider>
