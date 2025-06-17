@@ -60,7 +60,7 @@ export default function RootLayout({
           <CookieAlert />
           <ThemeProvider
             disableTransitionOnChange
-            enableSystem
+            // enableSystem
             attribute="class"
             defaultTheme="dark"
           >
@@ -78,7 +78,7 @@ export default function RootLayout({
                 },
               }}
               closeButton
-              className={`top-[80px] ${GeistSans.className} `}
+              className={`top-[80px] dark:bg-black ${GeistSans.className} `}
               position="top-center"
             />
             <RootProvider>{children}</RootProvider>
