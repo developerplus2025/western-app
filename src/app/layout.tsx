@@ -8,16 +8,16 @@ import "./globals.css";
 // import 'fumadsocs-ui/dist/style.css';
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Toaster, toast } from "sonner";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { DocsNavigation } from "@/components/DocsNavigation";
 import { CMDK } from "@/components/command-menu";
 // import { Toaster } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/ProgressBarProvider";
 import Footer from "@/components/footer";
-import { ToasterSonner } from "../components/ui/sonner";
+// import { ToasterSonner } from "../components/ui/sonner";
 import CookieAlert from "@/components/cookie-alert";
 import { RootProvider } from "fumadocs-ui/provider";
 import FrameVideo from "./home/components/frame-video";
@@ -67,7 +67,7 @@ export default function RootLayout({
             <Navigation />
             <DocsNavigation />
             <Toaster />
-            <ToasterSonner
+            <Toaster
               hotkey={["alt + C"]}
               toastOptions={{
                 unstyled: false,
