@@ -46,7 +46,12 @@ export default function RootLayout({
           <Analytics />
 
           <CookieAlert />
-          <ThemeProvider enableSystem attribute="class" defaultTheme="dark">
+          <ThemeProvider
+            disableTransitionOnChange
+            enableSystem
+            attribute="class"
+            defaultTheme="dark"
+          >
             <Navigation />
             <DocsNavigation />
             <Toaster />
