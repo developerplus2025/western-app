@@ -66,7 +66,7 @@ export default function RootLayout({
           >
             <Navigation />
             <DocsNavigation />
-            <Toaster />
+
             <Toaster
               hotkey={["alt + C"]}
               toastOptions={{
