@@ -83,7 +83,6 @@ export default function RootLayout({
               toastOptions={{
                 unstyled: false,
                 classNames: {
-                  description: "__className_3a0388",
                   cancelButton: "bg-orange-400",
                   closeButton:
                     "dark:bg-black left-[325px] top-1/2 -translate-y-1/2 border border-[#404040] transition-[background] transition-colors  ease-out duration-500 bg-white hover:bg-muted dark:hover:bg-white dark:hover:text-black",
@@ -91,7 +90,7 @@ export default function RootLayout({
               }}
               offset={{ top: "80px" }}
               closeButton
-              className={`dark:bg-black`}
+              className={`dark:bg-black ${GeistSans.className}`}
               position="top-center"
             />
             <RootProvider>{children}</RootProvider>
