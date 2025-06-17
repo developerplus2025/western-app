@@ -41,17 +41,19 @@ export default function RootLayout({
         className={`${GeistSans.className} custom_command_scroll dark`}
         style={{ colorScheme: "dark" }}
       >
-        <head />
-        <meta
-          name="theme-color"
-          content="#ffffff"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="#000000"
-          media="(prefers-color-scheme: dark)"
-        />
+        <head>
+          <meta
+            name="theme-color"
+            content="#ffffff"
+            media="(prefers-color-scheme: light)"
+          />
+          <meta
+            name="theme-color"
+            content="#000000"
+            media="(prefers-color-scheme: dark)"
+          />
+        </head>
+
         <body className="theme-default relative overflow-x-hidden antialiased">
           <Analytics />
 

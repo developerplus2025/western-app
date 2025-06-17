@@ -26,6 +26,7 @@ export default function Footer() {
       success: (data) => {
         return `Thanks for subscribing!`;
       },
+
       error: "Error",
       icon: (
         <svg
