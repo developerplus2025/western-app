@@ -42,7 +42,17 @@ export default function RootLayout({
         style={{ colorScheme: "dark" }}
       >
         <head />
-        <body className="relative overflow-x-hidden antialiased">
+        <meta
+          name="theme-color"
+          content="#ffffff"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#000000"
+          media="(prefers-color-scheme: dark)"
+        />
+        <body className="theme-default relative overflow-x-hidden antialiased">
           <Analytics />
 
           <CookieAlert />
