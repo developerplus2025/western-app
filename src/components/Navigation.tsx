@@ -673,10 +673,12 @@ export const Navigation = (): JSX.Element => {
                 href="/signin"
               >
                 <motion.div
+                  className="relative"
                   initial={{ opacity: 0 }} // Trạng thái ban đầu: mờ và di chuyển xuống
                   animate={{ opacity: 1 }} // Trạng thái sau khi hoàn thành: rõ và về vị trí ban đầu
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
+                  <div className="absolute bottom-0 left-1/2 h-px w-full -translate-x-1/2 rounded-lg bg-gradient-to-r from-transparent via-zinc-700 to-transparent dark:via-zinc-300"></div>
                   <Button
                     variant={"outline"}
                     className="flex h-fit items-center px-3 py-1 hover:bg-accent dark:hover:bg-[#1a1a1a]"
@@ -700,7 +702,8 @@ export const Navigation = (): JSX.Element => {
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   <AlertDialog>
-                    <AlertDialogTrigger asChild>
+                    <AlertDialogTrigger className="relative" asChild>
+                      <div className="absolute bottom-0 left-1/2 h-px w-full -translate-x-1/2 rounded-lg bg-gradient-to-r from-transparent via-zinc-700 to-transparent dark:via-zinc-300"></div>
                       <Button
                         variant={"outline"}
                         className="h-fit gap-1 px-3 py-1 [&_svg]:size-[15px]"
