@@ -43,21 +43,11 @@ export const ThemeToggle = ({
           aria-label="Toggle theme"
           {...props}
         >
-          <MoonIcon
-            // size={16}
-            className="shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100"
-            aria-hidden="true"
-          />
-          <SunIcon
-            // size={16}
-            className="absolute shrink-0 scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0"
-            aria-hidden="true"
-          />
-          {/* <motion.svg
+          <motion.svg
             exit={{ scale: 100 }}
             style={{
               color: "currentcolor",
-              // display: "var(--theme-toggle-sun-icon-display)",
+              display: "var(--theme-toggle-sun-icon-display)",
             }}
             xmlns="http://www.w3.org/2000/svg"
             width={24}
@@ -68,7 +58,7 @@ export const ThemeToggle = ({
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="size-[20px] scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0"
+            className="size-[20px] scale-100"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
@@ -82,7 +72,7 @@ export const ThemeToggle = ({
             exit={{ scale: 100 }}
             style={{
               color: "currentcolor",
-              // display: "var(--theme-toggle-moon-icon-display)",
+              display: "var(--theme-toggle-moon-icon-display)",
             }}
             xmlns="http://www.w3.org/2000/svg"
             width={24}
@@ -93,7 +83,7 @@ export const ThemeToggle = ({
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="size-[20px] scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100"
+            className="size-[20px]"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
@@ -101,7 +91,7 @@ export const ThemeToggle = ({
             <path d="M12 9l4.65 -4.65" />
             <path d="M12 14.3l7.37 -7.37" />
             <path d="M12 19.6l8.85 -8.85" />
-          </motion.svg> */}
+          </motion.svg>
         </IconButton>
       </div>
     </>
