@@ -43,7 +43,17 @@ export const ThemeToggle = ({
           aria-label="Toggle theme"
           {...props}
         >
-          <motion.svg
+          <MoonIcon
+            // size={16}
+            className="shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100"
+            aria-hidden="true"
+          />
+          <SunIcon
+            // size={16}
+            className="absolute shrink-0 scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0"
+            aria-hidden="true"
+          />
+          {/* <motion.svg
             exit={{ scale: 100 }}
             style={{
               color: "currentcolor",
@@ -91,7 +101,7 @@ export const ThemeToggle = ({
             <path d="M12 9l4.65 -4.65" />
             <path d="M12 14.3l7.37 -7.37" />
             <path d="M12 19.6l8.85 -8.85" />
-          </motion.svg>
+          </motion.svg> */}
         </IconButton>
       </div>
     </>
