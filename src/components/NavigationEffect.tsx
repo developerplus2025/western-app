@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useState, ReactNode } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
