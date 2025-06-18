@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import * as Masonry from "./masonry";
 import * as React from "react";
