@@ -11,6 +11,7 @@ import { GeistMono } from "geist/font/mono";
 // import { Toaster, toast } from "sonner";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Image from "next/image";
+import { META_THEME_COLORS } from "@/lib/config";
 import { Navigation } from "@/components/Navigation";
 import { DocsNavigation } from "@/components/DocsNavigation";
 import { CMDK } from "@/components/command-menu";
@@ -41,6 +42,20 @@ export default function RootLayout({
         className={`${GeistSans.className} custom_command_scroll dark`}
         style={{ colorScheme: "dark" }}
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+                }
+                if (localStorage.layout) {
+                  document.documentElement.classList.add('layout-' + localStorage.layout)
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
         <head>
           <meta name="theme-color" content="#000000" />
         </head>
