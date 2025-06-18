@@ -20,7 +20,7 @@ import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import CookieAlert from "@/components/cookie-alert";
 import { RootProvider } from "fumadocs-ui/provider";
-import FrameVideo from "./home/components/frame-video";
+import FrameVideo from "./(home)/components/frame-video";
 import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
