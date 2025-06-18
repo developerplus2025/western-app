@@ -12,7 +12,7 @@ const NavigationMenu = React.forwardRef<
     ref={ref}
     className={cn(
       "relative z-10 flex max-w-max flex-1 items-center justify-center",
-      className
+      className,
     )}
     {...props}
   >
@@ -30,7 +30,7 @@ const NavigationMenuList = React.forwardRef<
     ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
-      className
+      className,
     )}
     {...props}
   />
@@ -40,7 +40,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-7 w-max items-center  justify-center rounded-full    text-sm  transition-colors  text-[#7c7c7c] hover:text-accent-foreground  disabled:pointer-events-none disabled:opacity-50  dark:data-[active]:text-white  dark:data-[state=open]:text-white"
+  "group inline-flex h-7 w-max items-center  justify-center rounded-full    text-sm  transition-colors  text-[#7c7c7c] hover:text-accent-foreground  disabled:pointer-events-none disabled:opacity-50  dark:data-[active]:text-white  dark:data-[state=open]:text-white",
 );
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -68,8 +68,8 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-auto ",
-      className
+      "absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto",
+      className,
     )}
     {...props}
   />
@@ -85,8 +85,8 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "origin-top-center relative mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border backdrop-blur-2xl bg-popover text-popover-foreground shadow data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 transition-[width,_height] duration-300 md:w-[var(--radix-navigation-menu-viewport-width)]",
-        className
+        "origin-top-center relative mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow backdrop-blur-2xl transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+        className,
       )}
       ref={ref}
       {...props}
@@ -103,12 +103,12 @@ const NavigationMenuIndicator = React.forwardRef<
   <NavigationMenuPrimitive.Indicator
     ref={ref}
     className={cn(
-      "data-[state=visible]:animate-fadeIn absolute data-[state=hidden]:animate-fadeOut top-[32px] z-[1] flex h-3 items-end justify-center overflow-hidden transition-transform duration-300  ",
-      className
+      "absolute top-[32px] z-[1] flex h-3 items-end justify-center overflow-hidden transition-transform duration-300 data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn",
+      className,
     )}
     {...props}
   >
-    <div className="relative top-[8px] transition-transform duration-[400ms]">
+    <div className="duration-\\[400ms\\] relative top-[8px] transition-transform">
       <svg
         fill="none"
         height={46}
