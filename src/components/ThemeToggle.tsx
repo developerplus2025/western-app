@@ -47,7 +47,7 @@ export const ThemeToggle = ({
             exit={{ scale: 100 }}
             style={{
               color: "currentcolor",
-              display: "var(--theme-toggle-sun-icon-display)",
+              // display: "var(--theme-toggle-sun-icon-display)",
             }}
             xmlns="http://www.w3.org/2000/svg"
             width={24}
@@ -58,7 +58,7 @@ export const ThemeToggle = ({
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="size-[20px] scale-100"
+            className="size-[20px] scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
@@ -72,7 +72,7 @@ export const ThemeToggle = ({
             exit={{ scale: 100 }}
             style={{
               color: "currentcolor",
-              display: "var(--theme-toggle-moon-icon-display)",
+              // display: "var(--theme-toggle-moon-icon-display)",
             }}
             xmlns="http://www.w3.org/2000/svg"
             width={24}
@@ -83,7 +83,7 @@ export const ThemeToggle = ({
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="size-[20px]"
+            className="size-[20px] scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
