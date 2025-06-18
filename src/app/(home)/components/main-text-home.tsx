@@ -1,11 +1,11 @@
 "use client";
-import AnimateTextHome from "./components/text-animation";
-import DownloadButton from "./components/DownloadButton";
+import AnimateTextHome from "./text-animation";
+import DownloadButton from "./DownloadButton";
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import Modal from "./components/Modal";
+import Modal from "./Modal";
 export default function MainTextHome() {
   const { theme, systemTheme, setTheme } = useTheme();
   const [open, setOpen] = useState(false);

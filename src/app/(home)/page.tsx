@@ -6,7 +6,7 @@ import PowerBy from "./components/power-by";
 import AccordionFAQ from "./components/faq";
 import { PeopleSay } from "./components/people-say";
 import { NavigationEffect } from "@/components/NavigationEffect";
-import MainTextHome from "./main";
+import MainTextHome from "./components/main-text-home";
 
 export default function Home() {
   return (
