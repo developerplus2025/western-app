@@ -43,7 +43,7 @@ export default function MainTextHome() {
       className="mx-[5rem] mt-[1rem] flex w-full items-center justify-center gap-[2rem] min-[375px]:flex-col min-[645px]:flex-col xl:flex-col"
     >
       <div
-        // ref={containerRef}
+        ref={containerRef}
         className="flex flex-col items-center justify-center gap-[2rem]"
       >
         <AnimateTextHome />
