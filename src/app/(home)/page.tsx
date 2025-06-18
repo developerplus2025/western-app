@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import React, { useEffect, useState, useRef } from "react";
+// import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import CompAvatar from "@/components/comp-412";
 import AnimateTextHome from "./components/text-animation";
@@ -18,34 +18,34 @@ import Modal from "./components/Modal";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  const { theme, systemTheme, setTheme } = useTheme();
-  const [open, setOpen] = useState(false);
-  const [close, setClose] = useState<boolean>(false);
-  const [view, setView] = useState(false);
+  // const { theme, systemTheme, setTheme } = useTheme();
+  // const [open, setOpen] = useState(false);
+  // const [close, setClose] = useState<boolean>(false);
+  // const [view, setView] = useState(false);
 
-  useEffect(() => {
-    const storedClose = localStorage.getItem("close");
-    if (storedClose !== null) {
-      setClose(storedClose === "true");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storedClose = localStorage.getItem("close");
+  //   if (storedClose !== null) {
+  //     setClose(storedClose === "true");
+  //   }
+  // }, []);
 
-  const handleToggle = () => {
-    const newCloseValue = !close;
-    setClose(newCloseValue);
-    localStorage.setItem("close", newCloseValue.toString());
-  };
+  // const handleToggle = () => {
+  //   const newCloseValue = !close;
+  //   setClose(newCloseValue);
+  //   localStorage.setItem("close", newCloseValue.toString());
+  // };
 
-  const [value, setValue] = React.useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
+  // const [value, setValue] = React.useState(0);
+  // const containerRef = useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setValue((v) => (v >= 100 ? 0 : v + 10));
-    }, 500);
+  // React.useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setValue((v) => (v >= 100 ? 0 : v + 10));
+  //   }, 500);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <main className="GeistSans relative flex min-h-screen w-full flex-col items-center justify-between gap-[1rem] overflow-x-hidden pb-[1rem] pt-[6rem] dark:bg-black dark:[color-scheme:dark]">
@@ -57,7 +57,7 @@ export default function Home() {
         className="mx-[5rem] mt-[1rem] flex w-full items-center justify-center gap-[2rem] min-[375px]:flex-col min-[645px]:flex-col xl:flex-col"
       >
         <div
-          ref={containerRef}
+          // ref={containerRef}
           className="flex flex-col items-center justify-center gap-[2rem]"
         >
           <AnimateTextHome />
@@ -70,9 +70,9 @@ export default function Home() {
         </div>
         <div className="flex gap-[2rem]">
           <DownloadButton />
-          <Modal isOpen={open} onClose={() => setOpen(false)} />
+          {/* <Modal isOpen={open} onClose={() => setOpen(false)} /> */}
           <Button
-            onClick={() => setOpen(true)}
+            // onClick={() => setOpen(true)}
             variant={"default"}
             className=""
           >
